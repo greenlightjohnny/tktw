@@ -15,10 +15,13 @@ interface Configuration extends WebpackConfiguration {
 
 const config: Configuration = {
   mode: "development",
+
+  entry: "./src/index.tsx",
   output: {
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
     publicPath: "/",
   },
-  entry: "./src/index.tsx",
   module: {
     rules: [
       {
@@ -37,7 +40,9 @@ const config: Configuration = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+        //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
   },
@@ -56,8 +61,8 @@ const config: Configuration = {
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
     new MiniCssExtractPlugin({
-      filename: "styles.css",
-      chunkFilename: "styles.css",
+      filename: "index.css",
+      chunkFilename: "index.css",
     }),
   ],
   devtool: "inline-source-map",
