@@ -2,7 +2,7 @@ import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
-import * as webpackDevServer from "webpack-dev-server";
+//import * as webpackDevServer from "webpack-dev-server";
 import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
 
@@ -45,8 +45,12 @@ const config: Configuration = {
   ],
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "build",
-    historyApiFallback: true,
+    contentBase: path.join(__dirname, "build"),
+    //static: { directory: path.join(__dirname, "build") },
+    // static: {
+    //   directory: path.join(__dirname, "build"),
+    // },
+    //historyApiFallback: true,
     port: 4000,
     open: true,
     hot: true,
