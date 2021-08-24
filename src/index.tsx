@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 const App = () => {
   const unused = "something";
-  return <h1>My React and TypeScript App!</h1>;
+  return <h1>Day One</h1>;
 };
 ReactDOM.render(
   <React.StrictMode>

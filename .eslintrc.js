@@ -1,24 +1,28 @@
-{
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "plugins": [
+  plugins: [
     "@typescript-eslint",
-    "react-hooks"
+    "react-hooks",
+    
   ],
-  "extends": [
+  extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "rules": {
+  rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off"
   },
-  "settings": {
-    "react": {
+  settings: {
+    react: {
       "pragma": "React",
       "version": "detect"
     }
