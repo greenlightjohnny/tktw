@@ -1,6 +1,8 @@
 import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 //import * as webpackDevServer from "webpack-dev-server";
 import { Configuration as WebpackConfiguration } from "webpack";
@@ -33,6 +35,10 @@ const config: Configuration = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
     ],
   },
   resolve: {
@@ -48,6 +54,10 @@ const config: Configuration = {
     }),
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
+    }),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+      chunkFilename: "styles.css",
     }),
   ],
   devtool: "inline-source-map",

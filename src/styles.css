@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+@tailwind base;
+
+.menu-card {
+  @apply flex flex-col justify-center items-center bg-white h-screen font-mono py-40;
+}
+
+.menu-text {
+  @apply flex flex-col justify-center items-center;
+}
