@@ -1,6 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import {} from "webpack-dev-server";
 
 const config: webpack.Configuration = {
   mode: "development",
