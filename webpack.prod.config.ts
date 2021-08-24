@@ -4,13 +4,14 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const config: webpack.Configuration = {
   mode: "production",
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].[contenthash].js",
+    filename: "bundle.js",
     publicPath: "",
   },
   module: {
@@ -29,6 +30,12 @@ const config: webpack.Configuration = {
           },
         },
       },
+      {
+        test: /\.css$/,
+
+        use: ["style-loader", "css-loader", "postcss-loader"],
+        //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
     ],
   },
   resolve: {
@@ -43,6 +50,10 @@ const config: webpack.Configuration = {
     }),
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
+    }),
+    new MiniCssExtractPlugin({
+      filename: "index-dev.css",
+      chunkFilename: "index-dev2.css",
     }),
     new CleanWebpackPlugin(),
   ],

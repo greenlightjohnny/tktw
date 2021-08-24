@@ -40,7 +40,7 @@ const config: Configuration = {
       },
       {
         test: /\.css$/,
-        include: path.resolve(__dirname, "src"),
+
         use: ["style-loader", "css-loader", "postcss-loader"],
         //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
@@ -61,8 +61,8 @@ const config: Configuration = {
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
     new MiniCssExtractPlugin({
-      filename: "index.css",
-      chunkFilename: "index.css",
+      filename: "index-dev.css",
+      chunkFilename: "index-dev2.css",
     }),
   ],
   devtool: "inline-source-map",
