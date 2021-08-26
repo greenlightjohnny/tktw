@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono ml-8 mr-8 mt-4 border-solid border-4 border-gray-500 rounded-md border-opacity-30"
+      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono mx-auto mt-4 border-solid border-4 border-gray-500 rounded-md border-opacity-30 max-w-screen-2xl"
       role="navigation">
       <Link
         to="/"
