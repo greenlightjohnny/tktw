@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono"
-      role="navigation"
-    >
-      <Link to="/" className="pl-8">
-        Main
+      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono ml-8 mr-8 mt-4 border-solid border-4 border-gray-500 rounded-md border-opacity-30"
+      role="navigation">
+      <Link
+        to="/"
+        className="pl-8 text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+        StoneAlgo
       </Link>
       <div className="px-4 cursor-pointer md:hidden">
         <svg
@@ -16,8 +17,7 @@ const NavBar = () => {
           className="h-6 w-6"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+          stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -27,18 +27,39 @@ const NavBar = () => {
         </svg>
       </div>
 
-      <div className="pr-8 md:block hidden">
-        <Link className="p-4" to="/">
-          Home
+      <div className="hidden lg:flex space-x-10">
+        <Link
+          className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          to="/">
+          Calculate
         </Link>
-        <Link className="p-4" to="/menu">
-          Menu
+        <Link
+          className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          to="/menu">
+          Search
         </Link>
-        <Link className="p-4" to="/about">
-          About
+        <Link
+          className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          to="/about">
+          GIA Check
         </Link>
-        <Link className="p-4" to="/contact">
-          Contact
+        <Link
+          className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          to="/contact">
+          Lab Grown
+        </Link>
+      </div>
+
+      <div className="hidden lg:flex space-x-10">
+        <Link
+          className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          to="/">
+          Vault
+        </Link>
+        <Link
+          className="pr-8 text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          to="/menu">
+          My Account
         </Link>
       </div>
     </nav>

@@ -9,16 +9,14 @@ const Hero = () => {
       </h1>
       <Link
         to="/store"
-        className="py-5 px-10 bg-yellow-500 rounded-full text-3xl hover:bg-yellow-300 transition duration-300 ease-in-out flex items-center"
-      >
+        className="py-5 px-10 bg-yellow-500 rounded-full text-3xl hover:bg-yellow-300 transition duration-300 ease-in-out flex items-center">
         Store{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 ml-4"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+          stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
