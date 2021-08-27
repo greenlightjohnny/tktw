@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Appointments = () => {
   return (
     <div className="flex flex-col flex-grow mr-4">
-      <h4 className="text-black font-bold ml-4 mt-8">Your Appointments</h4>
-      <div className="grey-border w-full ml-4">
+      <h4 className="text-black font-bold md:ml-4 mt-8">Your Appointments</h4>
+      <div className="grey-border w-full md:ml-4">
         <div className="grey-border-inner pl-4 pr-4 pt-2 pb-2">
           <div className="flex flex-col">
             <p>Campbell Jewelers</p>

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const PriceAlerts = () => {
   return (
     <div>
-      <h4 className="text-black font-bold ml-4 mt-8">Your Price Alerts</h4>
-      <div className="grey-border w-full ml-4">
+      <h4 className="text-black font-bold md:ml-4 mt-8">Your Price Alerts</h4>
+      <div className="grey-border w-full md:ml-4">
         <div className="grey-border-inner pl-2 pr-2 pt-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"

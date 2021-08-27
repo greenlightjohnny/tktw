@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Notifications = () => {
   return (
     <>
-      <h4 className="text-black font-bold ml-4 mt-8">Your Notifcations</h4>
-      <div className="border-solid border-2 border-gray-500 rounded-md border-opacity-30 flex flex-col justify-between ml-4">
-        <div className=" flex flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4">
+      <h4 className="text-black font-bold md:ml-4 mt-8">Your Notifcations</h4>
+      <div className="border-solid border-2 border-gray-500 rounded-md border-opacity-30 flex flex-col justify-between md:ml-4">
+        <div className=" flex flex-col md:flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4">
           <div className="flex flex-row pl-2 pt-1 pb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +26,8 @@ const Notifications = () => {
               8/18
             </p>
           </div>
-          <div className="flex flex-row pr-2 pt-1 pb-1">
-            <Link to="/" className="pr-2 text-indigo-600">
+          <div className="flex flex-row pr-2 pt-1 pb-1 ml-2 md:ml-0  ">
+            <Link to="/" className="pr-2 text-indigo-600 block w-34">
               Learn More
             </Link>
             <svg
@@ -45,7 +45,7 @@ const Notifications = () => {
             </svg>
           </div>
         </div>
-        <div className=" flex flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4 mb-4">
+        <div className="flex flex-col md:flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4">
           <div className="flex flex-row pl-2 pt-1 pb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
