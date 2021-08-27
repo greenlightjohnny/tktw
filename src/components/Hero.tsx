@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       <Notifications />
-      <div className="flex flex-col justify-between mr-4 laptop:flex-row">
+      <div className="flex flex-col justify-between md:mr-4 laptop:flex-row mb-14">
         <Appointments />
         <PriceAlerts />
       </div>

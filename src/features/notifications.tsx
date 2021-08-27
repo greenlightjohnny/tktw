@@ -5,20 +5,25 @@ const Notifications = () => {
   return (
     <>
       <h4 className="text-black font-bold md:ml-4 mt-8">Your Notifcations</h4>
-      <div className="border-solid border-2 border-gray-500 rounded-md border-opacity-30 flex flex-col justify-between md:ml-4">
-        <div className=" flex flex-col md:flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4">
-          <div className="flex flex-row pl-2 pt-1 pb-1">
+      <div
+        className="border-solid border-2 border-gray-500 
+      rounded-md border-opacity-30 flex flex-col text-sm sm:text-base
+      justify-between md:ml-4">
+        <div
+          className=" flex flex-col md:flex-row 
+        justify-between border-solid border-2
+        border-gray-500 border-opacity-30
+         ml-2 mr-2 mt-4">
+          <div className="flex flex-row pl-2 pt-2 pb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
+              className="h-6 w-6 flex-shrink-0 text-gray-500"
+              viewBox="0 0 20 20"
+              fill="currentColor">
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                fillRule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clipRule="evenodd"
               />
             </svg>
             <p className="pl-2">
@@ -26,9 +31,19 @@ const Notifications = () => {
               8/18
             </p>
           </div>
-          <div className="flex flex-row pr-2 pt-1 pb-1 ml-2 md:ml-0  ">
-            <Link to="/" className="pr-2 text-indigo-600 block w-34">
-              Learn More
+          <div
+            className="flex flex-row pr-2
+           pt-2 pb-4 sm:pb-2 ml-2 md:ml-0 flex-shrink-0
+           flex-grow-0 items-center">
+            <Link to="/" className="pr-2 text-indigo-600 pl-2">
+              <span
+                id="sa-fair_price_title"
+                className="inline-flex px-4 
+                py-1 rounded-full text-sm leading-5
+                font-semibold tracking-wide
+                bg-indigo-100 text-indigo-600">
+                Learn More
+              </span>
             </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,19 +60,21 @@ const Notifications = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4">
-          <div className="flex flex-row pl-2 pt-1 pb-1">
+        <div
+          className="flex flex-col md:flex-row
+         justify-between border-solid border-2
+         border-gray-500 border-opacity-30
+          ml-2 mr-2 mt-4 mb-4">
+          <div className="flex flex-row pl-2 pt-2 pb-2 flex-grow-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
+              className="h-6 w-6 flex-shrink-0 text-gray-500"
+              viewBox="0 0 20 20"
+              fill="currentColor">
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                fillRule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clipRule="evenodd"
               />
             </svg>
             <p className="pl-2">
@@ -65,13 +82,24 @@ const Notifications = () => {
               your alert level of $10,832
             </p>
           </div>
-          <div className="flex flex-row pr-2 pt-1 pb-1">
-            <Link to="/" className="pr-2 text-indigo-600">
-              Learn More
+          <div
+            className="flex flex-row pr-2
+           pt-1 pb-4 sm:pb-2 ml-2 md:ml-0
+          flex-shrink-0 items-center">
+            <Link to="/" className="pr-2 text-indigo-600 pl-2">
+              <span
+                id="sa-fair_price_title"
+                className="inline-flex px-4
+                 py-1 rounded-full text-sm
+                 leading-5 font-semibold
+                  tracking-wide bg-indigo-100
+                   text-indigo-600">
+                Learn More
+              </span>
             </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-red-600"
+              className="h-6 w-6 text-red-600 "
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor">
