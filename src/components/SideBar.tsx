@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <div className="h-screen w-48">
       <nav
-        className="flex  flex-col mt-24 border-r-4 border-gray-500"
+        className="flex  flex-col mt-24 border-r-2 border-gray-300"
         role="navigation">
         <Link
           className="text-base font-medium text-gray-900 hover:text-gray-900 transition duration-150 ease-in-out mt-4"
@@ -14,27 +14,27 @@ const SideBar = () => {
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:text-gray-900 transition duration-150 ease-in-out mt-2"
-          to="/menu">
+          to="/">
           Appointments
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:text-gray-900 transition duration-150 ease-in-out mt-2"
-          to="/about">
+          to="/">
           Price Alerts
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:text-gray-900 transition duration-150 ease-in-out mt-2"
-          to="/contact">
+          to="/">
           Saved Diamonds
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:text-gray-900 transition duration-150 ease-in-out mt-2"
-          to="/about">
+          to="/">
           Recent Searches
         </Link>
         <Link
           className="text-base font-medium text-gray-900 hover:text-gray-900 transition duration-150 ease-in-out mt-2"
-          to="/contact">
+          to="/">
           Settings/Preferences
         </Link>
       </nav>

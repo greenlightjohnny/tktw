@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono mx-auto mt-4 border-solid border-4 border-gray-500 rounded-md border-opacity-30 max-w-screen-2xl"
+      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono mx-auto mt-4 border-solid border-2 border-gray-500 rounded-md border-opacity-30 max-w-screen-2xl"
       role="navigation">
       <Link
         to="/"
         className="pl-8 text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-        StoneAlgo
+        Stone Algo
       </Link>
       <div className="px-4 cursor-pointer md:hidden">
         <svg
@@ -35,17 +35,17 @@ const NavBar = () => {
         </Link>
         <Link
           className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-          to="/menu">
+          to="/">
           Search
         </Link>
         <Link
           className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-          to="/about">
+          to="/">
           GIA Check
         </Link>
         <Link
           className="text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-          to="/contact">
+          to="/">
           Lab Grown
         </Link>
       </div>
@@ -58,7 +58,7 @@ const NavBar = () => {
         </Link>
         <Link
           className="pr-8 text-base font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-          to="/menu">
+          to="/">
           My Account
         </Link>
       </div>
