@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Appointments = () => {
+const PriceAlerts = () => {
   return (
     <div>
       <h4 className="text-black font-bold ml-4 mt-8">Your Appointments</h4>
@@ -47,4 +47,4 @@ const Appointments = () => {
   );
 };
 
-export default Appointments;
+export default PriceAlerts;
