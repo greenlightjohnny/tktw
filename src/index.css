@@ -11,8 +11,8 @@
 }
 
 .grey-border {
-  @apply border-solid border-2 border-gray-500 border-opacity-30;
+  @apply border-solid border-2 border-gray-500 border-opacity-30 rounded-md;
 }
 .grey-border-inner {
-  @apply flex flex-row justify-between border-solid border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4;
+  @apply flex flex-row justify-between border-solid  border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4;
 }

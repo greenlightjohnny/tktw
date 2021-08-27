@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
-    <div className="h-screen w-48">
+    <div className="h-screen w-48 l:hidden">
       <nav
         className="flex  flex-col mt-24 border-r-2 border-gray-300"
         role="navigation">
