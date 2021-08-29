@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PriceAlerts = () => {
+const PriceAlerts: React.FC = () => {
   return (
     <div>
       <h4 className="text-black font-bold md:ml-4 mt-8">Your Price Alerts</h4>
@@ -12,7 +12,13 @@ const PriceAlerts = () => {
             className="h-6 w-6 mt-2 text-yellow-300"
             viewBox="0 0 20 20"
             fill="currentColor">
-            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            <path
+              d="M10 2a6 6 0 00-6 
+            6v3.586l-.707.707A1 1 0
+            004 14h12a1 1 0 00.707-1.707L16
+            11.586V8a6 6 0 00-6-6zM10 18a3
+            3 0 01-3-3h6a3 3 0 01-3 3z"
+            />
           </svg>
           <div className="flex flex-col pl-2">
             <p>GIA 123325234</p>
@@ -38,7 +44,13 @@ const PriceAlerts = () => {
             className="h-6 w-6 mt-2 text-gray-300"
             viewBox="0 0 20 20"
             fill="currentColor">
-            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            <path
+              d="M10 2a6 6 0 00-6 
+            6v3.586l-.707.707A1 1 0 004
+            14h12a1 1 0 00.707-1.707L16
+            11.586V8a6 6 0 00-6-6zM10
+            18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+            />
           </svg>
           <div className="flex flex-col pl-2">
             <p>GIA 123325234</p>
@@ -64,7 +76,13 @@ const PriceAlerts = () => {
             className="h-6 w-6 mt-2 text-gray-300"
             viewBox="0 0 20 20"
             fill="currentColor">
-            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            <path
+              d="M10 2a6 6 0 00-6 
+            6v3.586l-.707.707A1 1 0 004
+            14h12a1 1 0 00.707-1.707L16
+             11.586V8a6 6 0 00-6-6zM10
+             18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+            />
           </svg>
           <div className="flex flex-col pl-2">
             <p>GIA 123325234</p>
@@ -85,12 +103,7 @@ const PriceAlerts = () => {
         </div>
 
         <Link to="/" className="mt-8 mb-4 block text-center">
-          <span
-            id="sa-fair_price_title"
-            className="inline-flex px-4 py-1 
-            rounded-full text-sm leading-5
-            font-semibold tracking-wide
-            bg-indigo-100 text-indigo-600">
+          <span id="sa-fair_price_title" className="more-btn">
             More
           </span>
         </Link>

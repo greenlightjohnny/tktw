@@ -3,7 +3,8 @@
 @tailwind base;
 
 .menu-card {
-  @apply flex flex-col justify-center items-center bg-white h-screen font-mono py-40;
+  @apply flex flex-col justify-center 
+  items-center bg-white h-screen font-mono py-40;
 }
 
 .menu-text {
@@ -11,10 +12,13 @@
 }
 
 .grey-border {
-  @apply border-solid border-2 border-gray-500 border-opacity-30 rounded-md;
+  @apply border-solid border-2 border-gray-500 
+  border-opacity-30 rounded-md;
 }
 .grey-border-inner {
-  @apply flex flex-row justify-between border-solid  border-2 border-gray-500 border-opacity-30 ml-2 mr-2 mt-4;
+  @apply flex flex-row justify-between 
+  border-solid  border-2 border-gray-500 
+  border-opacity-30 ml-2 mr-2 mt-4;
 }
 
 .grey-border-inner-v2 {
@@ -52,4 +56,10 @@
   @apply bg-gradient-to-r
   from-purple-600 to-indigo-600 hover:from-purple-700
   hover:to-indigo-700;
+}
+
+.sidebar-text {
+  @apply text-base font-medium  
+  text-gray-900 hover:text-gray-900 
+  transition duration-150 ease-in-out mt-4;
 }

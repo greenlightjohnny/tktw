@@ -1,6 +1,6 @@
 import React from "react";
 
-const SavedDiamonds = () => {
+const SavedDiamonds: React.FC = () => {
   return (
     <div className="flex flex-col flex-grow md:mr-4">
       <h4 className="text-black font-bold md:ml-4 mt-8">Your Saved Diamonds</h4>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Appointments = () => {
   return (
-    <div className="flex flex-col flex-grow md:mr-4">
+    <div className="flex flex-col flex-grow mr-0 laptop:mr-4">
       <h4 className="text-black font-bold md:ml-4 mt-8">Your Appointments</h4>
       <div className="grey-border w-full md:ml-4 ">
         <div

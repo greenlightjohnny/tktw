@@ -5,7 +5,7 @@ import PriceAlerts from "./components/priceAlerts";
 import SavedDiamonds from "./components/savedDiamonds";
 import RecentDiamonds from "./components/recentDiamonds";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <>
       <Notifications />
