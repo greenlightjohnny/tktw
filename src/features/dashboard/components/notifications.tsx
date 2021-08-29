@@ -1,19 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Notifications = () => {
+const Notifications: React.FC = () => {
   return (
     <>
       <h4 className="text-black font-bold md:ml-4 mt-8">Your Notifcations</h4>
-      <div
-        className="border-solid border-2 border-gray-500 
-      rounded-md border-opacity-30 flex flex-col text-sm sm:text-base
-      justify-between md:ml-4">
-        <div
-          className=" flex flex-col md:flex-row 
-        justify-between border-solid border-2
-        border-gray-500 border-opacity-30
-         ml-2 mr-2 mt-4">
+      <div className="grey-border-v2">
+        <div className="grey-border-inner">
           <div className="flex flex-row pl-2 pt-2 pb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,12 +29,7 @@ const Notifications = () => {
            pt-2 pb-4 sm:pb-2 ml-2 md:ml-0 flex-shrink-0
            flex-grow-0 items-center">
             <Link to="/" className="pr-2 text-indigo-600 pl-2">
-              <span
-                id="sa-fair_price_title"
-                className="inline-flex px-4 
-                py-1 rounded-full text-sm leading-5
-                font-semibold tracking-wide
-                bg-indigo-100 text-indigo-600">
+              <span id="sa-fair_price_title" className="more-btn">
                 Learn More
               </span>
             </Link>
@@ -60,11 +48,7 @@ const Notifications = () => {
             </svg>
           </div>
         </div>
-        <div
-          className="flex flex-col md:flex-row
-         justify-between border-solid border-2
-         border-gray-500 border-opacity-30
-          ml-2 mr-2 mt-4 mb-4">
+        <div className="grey-border-inner mb-4">
           <div className="flex flex-row pl-2 pt-2 pb-2 flex-grow-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,23 +61,17 @@ const Notifications = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <p className="pl-2">
+            <p className="pl-2 ">
               Price Alert: GIA 12353455 has a current price of $10,888 below
               your alert level of $10,832
             </p>
           </div>
           <div
             className="flex flex-row pr-2
-           pt-1 pb-4 sm:pb-2 ml-2 md:ml-0
-          flex-shrink-0 items-center">
+            pt-2 pb-4 sm:pb-2 ml-2 md:ml-0 flex-shrink-0
+            flex-grow-0 items-center">
             <Link to="/" className="pr-2 text-indigo-600 pl-2">
-              <span
-                id="sa-fair_price_title"
-                className="inline-flex px-4
-                 py-1 rounded-full text-sm
-                 leading-5 font-semibold
-                  tracking-wide bg-indigo-100
-                   text-indigo-600">
+              <span id="sa-fair_price_title" className="more-btn">
                 Learn More
               </span>
             </Link>

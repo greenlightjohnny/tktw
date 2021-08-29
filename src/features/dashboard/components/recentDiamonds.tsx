@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const RecentDiamonds = () => {
+const RecentDiamonds: React.FC = () => {
   return (
     <div>
       <div>
@@ -27,14 +27,7 @@ const RecentDiamonds = () => {
               <p>1.05 ct gVS2</p>
             </div>
             <div className="pl-6 flex items-center">
-              <button
-                className="py-2 px-3 sm:px-5 bg-gradient-to-r text-sm sm:text-base
-            from-purple-600 to-indigo-600 hover:from-purple-700
-            hover:to-indigo-700 rounded-md text-white   
-            transition duration-300 ease-in-out
-            flex items-center w-36 sm:w-35 text-center justify-center">
-                View Details
-              </button>
+              <button className="app-btn purple-btn">View Details</button>
             </div>
           </div>
           <div className="grey-border-inner pl-2 pr-2 pt-2 pb-2">
@@ -55,14 +48,7 @@ const RecentDiamonds = () => {
               <p>1.05 ct gVS2</p>
             </div>
             <div className="pl-6 flex items-center">
-              <button
-                className="py-2 px-3 sm:px-5 bg-gradient-to-r text-sm sm:text-base
-            from-purple-600 to-indigo-600 hover:from-purple-700
-            hover:to-indigo-700 rounded-md text-white   
-            transition duration-300 ease-in-out
-            flex items-center w-36 sm:w-35 text-center justify-center">
-                View Details
-              </button>
+              <button className="app-btn purple-btn">View Details</button>
             </div>
           </div>
           <div className="grey-border-inner pl-2 pr-2 pt-2 pb-2">
@@ -83,24 +69,12 @@ const RecentDiamonds = () => {
               <p>1.05 ct gVS2</p>
             </div>
             <div className="pl-6 flex items-center">
-              <button
-                className="py-2 px-3 sm:px-5 bg-gradient-to-r text-sm sm:text-base
-            from-purple-600 to-indigo-600 hover:from-purple-700
-            hover:to-indigo-700 rounded-md text-white   
-            transition duration-300 ease-in-out
-            flex items-center w-36 sm:w-35 text-center justify-center">
-                View Details
-              </button>
+              <button className="app-btn purple-btn">View Details</button>
             </div>
           </div>
 
           <Link to="/" className="mt-8 mb-4 block text-center">
-            <span
-              id="sa-fair_price_title"
-              className="inline-flex px-4 py-1 
-            rounded-full text-sm leading-5
-            font-semibold tracking-wide
-            bg-indigo-100 text-indigo-600">
+            <span id="sa-fair_price_title" className="more-btn">
               More
             </span>
           </Link>
