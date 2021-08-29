@@ -17,6 +17,7 @@ const NavBar: React.FC = () => {
   const refTwo = useRef<HTMLAnchorElement>(null);
 
   const onClickOutsideDropdown = useCallback((e) => {
+    console.log(":out");
     if (ref.current?.contains(e.target) || refTwo.current?.contains(e.target)) {
       return;
     }
@@ -26,8 +27,13 @@ const NavBar: React.FC = () => {
   //useOnClickOutside(ref, () => setVisible(false));
   useOnClickOutside(ref, onClickOutsideDropdown);
 
+  const hihi = () => {
+    console.log("hihi");
+  };
+
   return (
     <nav
+      onClick={hihi}
       className="flex justify-between items-center
        h-16 bg-white text-black relative shadow-sm 
        font-mono mx-auto mt-4 border-solid
@@ -51,7 +57,7 @@ const NavBar: React.FC = () => {
         hover:bg-gray-100 focus:outline-none
         focus:ring-2 focus:ring-inset
         focus:ring-indigo-500"
-          onClick={(e): void => showMenu(e)}>
+          onClick={showMenu}>
           <svg
             className="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +158,7 @@ const NavBar: React.FC = () => {
           <div id="sa-nav_mobile">
             <div className="px-2 pt-2 pb-3">
               <a
-                href="javascript:void(0)"
+                href="/"
                 data-modal_open="true"
                 data-modal_type="login"
                 data-link_name="login"
