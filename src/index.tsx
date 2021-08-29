@@ -1,4 +1,4 @@
-import Layout from "./components/Layout";
+import Layout from "./components/layout";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";

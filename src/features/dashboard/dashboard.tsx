@@ -1,9 +1,9 @@
-import Notifications from "../features/notifications";
+import Notifications from "./components/notifications";
 import React from "react";
-import Appointments from "../features/appointments";
-import PriceAlerts from "../features/priceAlerts";
-import SavedDiamonds from "../features/savedDiamonds";
-import RecentDiamonds from "../features/recentDiamonds";
+import Appointments from "./components/appointments";
+import PriceAlerts from "./components/priceAlerts";
+import SavedDiamonds from "./components/savedDiamonds";
+import RecentDiamonds from "./components/recentDiamonds";
 
 const Hero = () => {
   return (

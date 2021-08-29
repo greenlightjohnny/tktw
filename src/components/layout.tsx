@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "./NavBar";
-import SideBar from "./SideBar";
+import NavBar from "./navBar";
+import SideBar from "./sideBar";
 
 interface OwnProps {
   children: React.ReactNode;
