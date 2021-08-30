@@ -77,21 +77,21 @@ const NavBar: React.FC = () => {
       <div
         id="sa-mobile_menu_holder"
         className={
-          "absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden " +
+          "absolute z-30 -top-1 -left-1 -right-1  shadow-sm transition transform origin-top-right border-solid border-2 border-gray-500 rounded-md border-opacity-30 lg:hidden " +
           (visible ? "block" : "hidden")
         }>
         <div
           className="rounded-lg shadow-lg ring-1
            ring-black ring-opacity-5 bg-white
            divide-y-2 divide-gray-50">
-          <div className="pt-5 pb-6 px-5">
-            <div className="flex items-center justify-between">
+          <div className="h-16">
+            <div className="flex items-center justify-end h-16">
               {/* <div>                  
                 <img className="h-8 w-auto sm:h-10"
                   style="border-radius: 4px;"
                   src="/static/dist/img/marketing_logo.jpg" alt="">
                 </div> */}
-              <div className="-mr-2">
+              <div className="mr-2">
                 <button
                   onClick={(e) => showMenu(e)}
                   id="sa-btn_close"

@@ -6,7 +6,11 @@ const Notifications: React.FC = () => {
     <>
       <h4 className="text-black font-bold md:ml-4 mt-8">Your Notifcations</h4>
       <div className="grey-border-v2">
-        <div className="grey-border-inner">
+        <div
+          className="flex flex-col md:flex-row  
+        justify-between border-solid border-2
+        border-gray-500 border-opacity-30
+         ml-2 mr-2 mt-4">
           <div className="flex flex-row pl-2 pt-2 pb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +52,11 @@ const Notifications: React.FC = () => {
             </svg>
           </div>
         </div>
-        <div className="grey-border-inner mb-4">
+        <div
+          className="flex flex-col md:flex-row  
+        justify-between border-solid border-2
+        border-gray-500 border-opacity-30
+         ml-2 mr-2 mt-4 mb-4">
           <div className="flex flex-row pl-2 pt-2 pb-2 flex-grow-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
