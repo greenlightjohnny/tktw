@@ -70,8 +70,8 @@ const NavBar: React.FC = () => {
         id="sa-mobile_menu_holder"
         ref={ref}
         className={
-          "absolute z-30 -top-1 -left-1 -right-1  shadow-sm transition transform origin-top-right border-solid border-2 border-gray-500 rounded-md border-opacity-30 lg:hidden " +
-          (visible ? "block" : "hidden")
+          "absolute z-30 -top-1 -left-1 -right-1  shadow-sm  transition-all duration-500 ease-in-out border-solid border-opacity-0 border-2  rounded-md   border-gray-500 max-h-0 overflow-hidden rounded-md lg:hidden " +
+          (visible ? "block max-h-screen border-opacity-30" : "")
         }>
         <div
           className="rounded-lg shadow-lg ring-1
