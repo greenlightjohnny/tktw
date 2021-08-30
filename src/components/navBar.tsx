@@ -4,20 +4,17 @@ import useOnClickOutside from "../util/clickOutv2";
 
 const NavBar: React.FC = () => {
   const [visible, setVisible] = useState(false);
-  console.log(visible);
 
   const showMenu = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
     e.preventDefault();
-    console.log("test");
     setVisible(!visible);
   };
   const ref = useRef<HTMLDivElement>(null);
-  const refTwo = useRef<HTMLAnchorElement>(null);
+  const refTwo = useRef<HTMLDivElement>(null);
 
   const onClickOutsideDropdown = useCallback((e) => {
-    console.log(":out");
     if (ref.current?.contains(e.target) || refTwo.current?.contains(e.target)) {
       return;
     }
@@ -27,13 +24,8 @@ const NavBar: React.FC = () => {
   //useOnClickOutside(ref, () => setVisible(false));
   useOnClickOutside(ref, onClickOutsideDropdown);
 
-  const hihi = () => {
-    console.log("hihi");
-  };
-
   return (
     <nav
-      onClick={hihi}
       className="flex justify-between items-center
        h-16 bg-white text-black relative shadow-sm 
        font-mono mx-auto mt-4 border-solid
@@ -76,6 +68,7 @@ const NavBar: React.FC = () => {
 
       <div
         id="sa-mobile_menu_holder"
+        ref={ref}
         className={
           "absolute z-30 -top-1 -left-1 -right-1  shadow-sm transition transform origin-top-right border-solid border-2 border-gray-500 rounded-md border-opacity-30 lg:hidden " +
           (visible ? "block" : "hidden")
@@ -123,48 +116,43 @@ const NavBar: React.FC = () => {
           </div>
 
           <div className="px-2 pt-2 pb-3">
-            <a
-              href="/diamond-price-calculator/"
+            <Link
+              to="/"
               data-link_name="calculator"
-              className="sa-home_nav_link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
+              className="dropdown-nav-link">
               Calculate
-            </a>
-            <a
-              href="/diamond-questionnaire"
-              data-link_name="search"
-              className="sa-home_nav_link mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
+            </Link>
+            <Link to="/" data-link_name="search" className="dropdown-nav-link">
               Search
-            </a>
-            <a
-              href="/diamond-details/"
+            </Link>
+            <Link
+              to="/"
               data-link_name="free check"
-              className="sa-home_nav_link mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
+              className="dropdown-nav-link">
               GIA Check
-            </a>
-            <a
-              href="/vault/"
-              data-link_name="vault"
-              className="sa-home_nav_link mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
+            </Link>
+            <Link to="/" data-link_name="vault" className="dropdown-nav-link">
               <span className="">Vault</span>
-            </a>
-            <a
-              href="/blog/"
-              data-link_name="blog"
-              className="sa-home_nav_link mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
+            </Link>
+            <Link to="/" data-link_name="blog" className="dropdown-nav-link">
               Learn
-            </a>
+            </Link>
           </div>
 
           <div id="sa-nav_mobile">
             <div className="px-2 pt-2 pb-3">
-              <a
-                href="/"
+              <Link
+                to="/"
                 data-modal_open="true"
                 data-modal_type="login"
                 data-link_name="login"
-                className="sa-home_nav_link block px-3 py-2 rounded-md text-base font-medium text-indigo-700 hover:text-indigi-900 hover:bg-gray-50 focus:outline-none focus:text-indigo-900 focus:bg-gray-50 transition duration-150 ease-in-out">
+                className="sa-home_nav_link 
+                block px-3 py-2 rounded-md text-base
+                font-medium text-indigo-700 hover:text-indigi-900
+                 hover:bg-gray-50 focus:outline-none focus:text-indigo-900
+                  focus:bg-gray-50 transition duration-150 ease-in-out">
                 Sign in
-              </a>
+              </Link>
             </div>
           </div>
         </div>
