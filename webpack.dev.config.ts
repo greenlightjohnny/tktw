@@ -51,7 +51,7 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: "./src/index.html",
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
@@ -61,8 +61,8 @@ const config: Configuration = {
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
     new MiniCssExtractPlugin({
-      filename: "index-dev.css",
-      chunkFilename: "index-dev2.css",
+      filename: "styles.css",
+      chunkFilename: "[name]-dev2.css",
     }),
   ],
   devtool: "inline-source-map",
