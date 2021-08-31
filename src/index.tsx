@@ -8,7 +8,8 @@ import Routing from "./configs/routing";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Layout>{Routing}</Layout>
+      {/* <Layout>{Routing}</Layout> */}
+      {Routing}
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
