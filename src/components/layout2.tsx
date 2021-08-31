@@ -31,8 +31,6 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
-import Feeds from "./components2/notifications";
-import Feeds2 from "./components2/notifications3";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -52,7 +50,13 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Dashboard: React.FC = () => {
+interface OwnProps {
+  children: React.ReactNode;
+}
+
+type Props = OwnProps;
+
+const Layout: React.FC<Props> = ({ children }: Props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -272,8 +276,7 @@ const Dashboard: React.FC = () => {
               <div className="py-4">
                 {/* <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" /> */}
                 <div className="flex flex-col lg:flex-row justify-between">
-                  <Feeds />
-                  <Feeds2 />
+                  {children}
                 </div>
               </div>
               {/* /End replace */}
@@ -285,4 +288,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default Layout;
