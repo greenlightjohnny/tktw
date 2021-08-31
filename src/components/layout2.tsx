@@ -1,19 +1,3 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import React from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
@@ -31,14 +15,35 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
+import { Link, NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Notifications", href: "#", icon: BellIcon, current: false },
-  { name: "Appointments", href: "#", icon: CalendarIcon, current: false },
-  { name: "Saved Diamonds", href: "#", icon: SaveIcon, current: false },
-  { name: "Recent Searches", href: "#", icon: SearchIcon, current: false },
-  { name: "Settings", href: "#", icon: CogIcon, current: false },
+  { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
+  {
+    name: "Notifications",
+    href: "/notifications",
+    icon: BellIcon,
+    current: false,
+  },
+  {
+    name: "Appointments",
+    href: "/appointments",
+    icon: CalendarIcon,
+    current: false,
+  },
+  {
+    name: "Saved Diamonds",
+    href: "/saved-diamonds",
+    icon: SaveIcon,
+    current: false,
+  },
+  {
+    name: "Recent Searches",
+    href: "/recent-searches",
+    icon: SearchIcon,
+    current: false,
+  },
+  { name: "Settings", href: "/settings", icon: CogIcon, current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -113,9 +118,9 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2 space-y-1">
                   {navigation.map((item) => (
-                    <a
+                    <NavLink
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className={classNames(
                         item.current
                           ? "bg-gray-900 text-white"
@@ -132,7 +137,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </NavLink>
                   ))}
                 </nav>
               </div>
@@ -159,13 +164,13 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
             <div className="flex-1 flex flex-col overflow-y-auto">
               <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
+                    exact={true}
+                    activeClassName="bg-gray-900 text-white"
                     className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "text-gray-300 hover:bg-gray-700 hover:text-white",
                       "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}>
                     <item.icon
@@ -178,7 +183,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                       aria-hidden="true"
                     />
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </nav>
             </div>
@@ -267,9 +272,9 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         <main className="flex-1 relative overflow-y-auto focus:outline-none">
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              <h1 className="text-2xl font-semibold text-gray-900">
+              {/* <h1 className="text-2xl font-semibold text-gray-900">
                 Dashboard
-              </h1>
+              </h1> */}
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               {/* Replace with your content */}
