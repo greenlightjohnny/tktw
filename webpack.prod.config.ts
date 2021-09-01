@@ -6,13 +6,20 @@ import ESLintPlugin from "eslint-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
+const prescribertHtml = new HtmlWebpackPlugin({
+  template: "./build/index.html",
+  filename: "./index.html",
+  inject: true,
+  chunks: ["jewel"],
+});
+
 const config: webpack.Configuration = {
   mode: "production",
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
-    publicPath: "",
+    filename: "js/[name]-[hash].js",
+    publicPath: "/spa/",
   },
   module: {
     rules: [
@@ -33,17 +40,30 @@ const config: webpack.Configuration = {
       {
         test: /\.css$/,
 
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+        ],
         //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
   },
   resolve: {
+    modules: [
+      path.resolve("./src/"),
+      "node_modules",
+      path.resolve("./public/"),
+    ],
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: "./build/index.html",
+      filename: "./index.html",
+      inject: true,
+      chunks: ["jewel"],
     }),
     new ForkTsCheckerWebpackPlugin({
       async: false,
@@ -52,7 +72,7 @@ const config: webpack.Configuration = {
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
     new MiniCssExtractPlugin({
-      filename: "index-dev.css",
+      filename: "css/[name]-[hash].css",
       chunkFilename: "index-dev2.css",
     }),
     new CleanWebpackPlugin(),
