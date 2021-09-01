@@ -45,8 +45,8 @@ const navigation = [
     current: false,
   },
   {
-    name: "Recent Searches",
-    href: "/recent-searches",
+    name: "Recent Diamonds",
+    href: "/recent-diamonds",
     icon: SearchIcon,
     current: false,
   },
