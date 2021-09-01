@@ -280,9 +280,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
               {/* Replace with your content */}
               <div className="py-4">
                 {/* <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" /> */}
-                <div className="flex flex-col lg:flex-row justify-between">
-                  {children}
-                </div>
+                <div className="">{children}</div>
               </div>
               {/* /End replace */}
             </div>
