@@ -60,7 +60,7 @@ const Feeds: React.FC = () => {
   return (
     <div>
       <h3 className="text-lg mb-2 leading-6 font-medium text-gray-900">
-        Notifications
+        Appointments
       </h3>
 
       <div

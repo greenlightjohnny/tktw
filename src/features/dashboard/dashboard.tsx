@@ -11,12 +11,17 @@ const Dashboard: React.FC = () => {
       <div className=" flex flex-grow-1 flex-row lg:flex-row justify-between">
         <Notifications />
       </div>
-      <div className="">
-        <Alert />
+
+      <div className="flex flex-col lg:flex-row justify-between">
+        <Feed />
+        <Appointments />
       </div>
       <div className="flex flex-col lg:flex-row justify-between">
-        <Appointments />
         <RecentDiamonds />
+        <RecentDiamonds />
+      </div>
+      <div className="">
+        <Alert />
       </div>
     </>
   );
