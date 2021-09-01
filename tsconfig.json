@@ -1,11 +1,13 @@
-{
+
+
+ {
     "compilerOptions": {
       "lib": ["dom", "dom.iterable", "esnext"],
       "allowJs": true,
       "allowSyntheticDefaultImports": true,
       "skipLibCheck": true,
       "module": "commonjs",
-		"target": "es5",
+		  "target": "es5",
       "esModuleInterop": true,
       "strict": true,
       "forceConsistentCasingInFileNames": true,
@@ -14,10 +16,10 @@
       "isolatedModules": true,
       "noEmit": true,
       "jsx": "react-jsx",
-      "baseUrl": "."
+      "baseUrl": ".",
     },
-    
+
     "include": [ "**/*.ts", "**/*.tsx", "./src/**/*", "postcss.config.js"],
   "exclude": ["node_modules", "./node_modules"],
-  "typeRoots": ["./typings.d.ts","./declaration.d.ts", "declaration.d.ts", "../@types"]
+  "typeRoots": ["./typings.d.ts", "../@types"]
   }
