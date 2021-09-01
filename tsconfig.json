@@ -13,11 +13,10 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "noEmit": true,
-    
       "jsx": "react-jsx",
       "baseUrl": "."
-
     },
+    
     "include": [ "**/*.ts", "**/*.tsx", "./src/**/*", "postcss.config.js"],
   "exclude": ["node_modules", "./node_modules"],
   "typeRoots": ["./typings.d.ts","./declaration.d.ts", "declaration.d.ts", "../@types"]
