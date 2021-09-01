@@ -51,10 +51,30 @@ import {
 const transactions = [
   {
     id: 1,
-    name: "Payment to Molly Sanders",
+    name: "Campbell Jewelwers",
     href: "#",
-    amount: "$20,000",
-    currency: "USD",
+    amount: "Cambell Jewelers would like to reschedule their appointment for",
+    currency: "10/3/2021",
+    status: "success",
+    date: "July 11, 2020",
+    datetime: "2020-07-11",
+  },
+  {
+    id: 2,
+    name: "Campbell Jewelers",
+    href: "#",
+    amount: "Cambell Jewelers would like to reschedule their appointment for",
+    currency: "8/19/2021",
+    status: "success",
+    date: "July 11, 2020",
+    datetime: "2020-07-11",
+  },
+  {
+    id: 1,
+    name: "Campbell Jewelers",
+    href: "#",
+    amount: "Cambell Jewelers would like to reschedule their appointment for",
+    currency: "9/20/2021",
     status: "success",
     date: "July 11, 2020",
     datetime: "2020-07-11",
@@ -73,9 +93,9 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative h-screen flex overflow-hidden bg-gray-100">
-      <h2 className="max-w-6xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">
-        Recent activity
+    <div className="relative  flex flex-col overflow-hidden bg-gray-100 mb-10">
+      <h2 className="  mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-0">
+        Appointments
       </h2>
 
       {/* Activity list (smallest breakpoint only) */}
@@ -136,31 +156,31 @@ export default function Example() {
       </div>
 
       {/* Activity table (small breakpoint and up) */}
-      <div className="hidden sm:block">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="hidden sm:block shadow-md">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-0 ">
           <div className="flex flex-col mt-2">
             <div className="align-middle min-w-full overflow-x-auto shadow overflow-hidden sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead>
                   <tr>
                     <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Transaction
+                      Name
                     </th>
-                    <th className="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Amount
+                    <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Description
                     </th>
                     <th className="hidden px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block">
-                      Status
+                      Date
                     </th>
                     <th className="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Date
+                      Action
                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {transactions.map((transaction) => (
                     <tr key={transaction.id} className="bg-white">
-                      <td className="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      <td className="max-w-0  px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <div className="flex">
                           <a
                             href={transaction.href}
@@ -175,11 +195,16 @@ export default function Example() {
                           </a>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
                         <span className="text-gray-900 font-medium">
                           {transaction.amount}{" "}
                         </span>
                         {transaction.currency}
+                      </td>
+                      <td className="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500">
+                        <time dateTime={transaction.datetime}>
+                          {transaction.date}
+                        </time>
                       </td>
                       <td className="hidden px-6 py-4 whitespace-nowrap text-sm text-gray-500 md:block">
                         <span
@@ -189,11 +214,6 @@ export default function Example() {
                           )}>
                           {transaction.status}
                         </span>
-                      </td>
-                      <td className="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500">
-                        <time dateTime={transaction.datetime}>
-                          {transaction.date}
-                        </time>
                       </td>
                     </tr>
                   ))}
