@@ -1,12 +1,12 @@
 import path from "path";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-const prescribertHtml = new HtmlWebpackPlugin({
+const indexHtml = new HtmlWebpackPlugin({
   template: "./build/index.html",
   filename: "./index.html",
   inject: true,
@@ -15,7 +15,8 @@ const prescribertHtml = new HtmlWebpackPlugin({
 
 const config: webpack.Configuration = {
   mode: "production",
-  entry: "./src/index.tsx",
+  //entry: "./src/index.tsx",
+  entry: path.join(__dirname, "src", "index.tsx"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "js/[name]-[hash].js",
@@ -25,7 +26,9 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.(ts|js)x?$/i,
+        include: path.resolve(__dirname, "src"),
         exclude: /node_modules/,
+
         use: {
           loader: "babel-loader",
           options: {
@@ -39,7 +42,8 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.css$/,
-
+        include: path.resolve(__dirname, "src"),
+        exclude: /node_modules/,
         use: [
           "style-loader",
           MiniCssExtractPlugin.loader,
@@ -54,7 +58,7 @@ const config: webpack.Configuration = {
     modules: [
       path.resolve("./src/"),
       "node_modules",
-      path.resolve("./public/"),
+      path.resolve("./build/**/*"),
     ],
     extensions: [".tsx", ".ts", ".js"],
   },
@@ -73,7 +77,7 @@ const config: webpack.Configuration = {
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name]-[hash].css",
-      chunkFilename: "index-dev2.css",
+      chunkFilename: "[id].css",
     }),
     new CleanWebpackPlugin(),
   ],
