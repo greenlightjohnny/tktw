@@ -16,6 +16,6 @@
       "baseUrl": "."
 
     },
-    "include": [ "**/*.ts", "**/*.tsx", "postcss.config.js"],
-  "exclude": ["node_modules"]
+    "include": [ "**/*.ts", "**/*.tsx", "./src/**/*", "postcss.config.js"],
+  "exclude": ["node_modules", "./node_modules"]
   }

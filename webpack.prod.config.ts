@@ -1,6 +1,6 @@
 import path from "path";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import webpack from "webpack";
+import webpack, { HotModuleReplacementPlugin } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
@@ -15,10 +15,11 @@ const indexHtml = new HtmlWebpackPlugin({
 
 const config: webpack.Configuration = {
   mode: "production",
-  //entry: "./src/index.tsx",
-  entry: path.join(__dirname, "src", "index.tsx"),
+  entry: "./src/index.tsx",
+  //entry: path.join(__dirname, "src", "index.tsx"),
   output: {
-    path: path.resolve(__dirname, "build"),
+    //path: path.resolve(__dirname, "./dist"),
+    path: path.resolve("./build"),
     filename: "js/[name]-[hash].js",
     publicPath: "/spa/",
   },
@@ -26,7 +27,7 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.(ts|js)x?$/i,
-        include: path.resolve(__dirname, "src"),
+        //include: path.resolve(__dirname, "src"),
         exclude: /node_modules/,
 
         use: {
@@ -42,14 +43,36 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.css$/,
-        include: path.resolve(__dirname, "src"),
+        //include: path.resolve(__dirname, "src"),
         exclude: /node_modules/,
         use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
+          //"style-loader",
+          //MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          },
         ],
+        // use: [
+        //   "style-loader",
+        //   {
+        //     loader: MiniCssExtractPlugin.loader,
+        //     options: {
+        //       //hmr: argv.mode === 'development'
+        //     },
+        //   },
+        //   {
+        //     loader: "css-loader",
+        //     options: {
+        //       importLoaders: 1,
+        //     },
+        //   },
+        //   "postcss-loader",
+        // ],
         //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
@@ -58,17 +81,21 @@ const config: webpack.Configuration = {
     modules: [
       path.resolve("./src/"),
       "node_modules",
+      path.resolve("./build/"),
       path.resolve("./build/**/*"),
     ],
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".css"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./build/index.html",
-      filename: "./index.html",
+      // template: "./build/index.html",
+      // filename: "./index.html",
+      template: "./src/index.html",
+      //filename: "./index.html",
       inject: true,
       chunks: ["jewel"],
     }),
+    // indexHtml,
     new ForkTsCheckerWebpackPlugin({
       async: false,
     }),
@@ -80,6 +107,7 @@ const config: webpack.Configuration = {
       chunkFilename: "[id].css",
     }),
     new CleanWebpackPlugin(),
+    new HotModuleReplacementPlugin(),
   ],
 };
 
