@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Layout from "./components/layout2";
+import Layout from "./components/layout";
 
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";

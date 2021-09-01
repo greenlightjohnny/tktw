@@ -1,24 +1,25 @@
-import Notifications from "./components/notifications";
 import React from "react";
-import Appointments from "./components/appointments";
-import PriceAlerts from "./components/priceAlerts";
-import SavedDiamonds from "./components/savedDiamonds";
-import RecentDiamonds from "./components/recentDiamonds";
+import Notifications from "./components/notifications3";
+import Feed from "./components/notifications";
+import Alert from "../priceAlerts/alerts2";
+import Appointments from "../appointments/appointments";
+import RecentDiamonds from "../recentDiamonds/recentDiamonds";
 
-const Hero: React.FC = () => {
+const Dashboard: React.FC = () => {
   return (
     <>
-      <Notifications />
-      <div className="flex flex-col justify-between md:mr-4 laptop:flex-row mb-14">
-        <Appointments />
-        <PriceAlerts />
+      <div className=" flex flex-grow-1 flex-row lg:flex-row justify-between">
+        <Notifications />
       </div>
-      <div className="flex flex-col justify-between md:mr-4 laptop:flex-row mb-14">
-        <SavedDiamonds />
+      <div className="">
+        <Alert />
+      </div>
+      <div className="flex flex-col lg:flex-row justify-between">
+        <Appointments />
         <RecentDiamonds />
       </div>
     </>
   );
 };
 
-export default Hero;
+export default Dashboard;
