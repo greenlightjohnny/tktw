@@ -44,6 +44,7 @@ import {
   CheckCircleIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  ExclamationIcon,
   OfficeBuildingIcon,
   SearchIcon,
 } from "@heroicons/react/solid";
@@ -51,13 +52,14 @@ import {
 const transactions = [
   {
     id: 1,
-    name: "Campbell Jewelwers",
+    name: "Campbell Jewelers",
     href: "#",
     amount: "Cambell Jewelers would like to reschedule their appointment for",
     currency: "10/3/2021",
-    status: "success",
+    status: "Confirm",
     date: "July 11, 2020",
     datetime: "2020-07-11",
+    color: "bg-green-100 text-green-800",
   },
   {
     id: 2,
@@ -65,9 +67,10 @@ const transactions = [
     href: "#",
     amount: "Cambell Jewelers would like to reschedule their appointment for",
     currency: "8/19/2021",
-    status: "success",
+    status: "Pending",
     date: "July 11, 2020",
     datetime: "2020-07-11",
+    color: "bg-yellow-100 text-yellow-800",
   },
   {
     id: 1,
@@ -75,16 +78,17 @@ const transactions = [
     href: "#",
     amount: "Cambell Jewelers would like to reschedule their appointment for",
     currency: "9/20/2021",
-    status: "success",
+    status: "View",
     date: "July 11, 2020",
     datetime: "2020-07-11",
+    color: "bg-indigo-100 text-gray-800",
   },
   // More transactions...
 ];
 const statusStyles = {
   success: "bg-green-100 text-green-800",
   processing: "bg-yellow-100 text-yellow-800",
-  failed: "bg-gray-100 text-gray-800",
+  failed: "bg-indigo-100 text-gray-800",
 };
 
 function classNames(...classes: string[]) {
@@ -93,7 +97,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative  flex flex-col overflow-hidden bg-gray-100 mb-10">
+    <div className="relative  flex flex-col overflow-hidden bg-gray-100 mb-10 shadow-md">
       <h2 className="  mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-0">
         Appointments
       </h2>
@@ -163,16 +167,16 @@ export default function Example() {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead>
                   <tr>
-                    <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 bg-gray-300 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Name
                     </th>
-                    <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 bg-gray-300 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Description
                     </th>
-                    <th className="hidden px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block">
+                    <th className="hidden px-6 py-3 bg-gray-300 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block">
                       Date
                     </th>
-                    <th className="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 bg-gray-300 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Action
                     </th>
                   </tr>
@@ -180,40 +184,50 @@ export default function Example() {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {transactions.map((transaction) => (
                     <tr key={transaction.id} className="bg-white">
-                      <td className="max-w-0  px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      <td className="  px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <div className="flex">
                           <a
                             href={transaction.href}
                             className="group inline-flex space-x-2 truncate text-sm">
-                            <CashIcon
+                            <ExclamationIcon
                               className="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
-                            <p className="text-gray-500 truncate group-hover:text-gray-900">
+                            <p className="text-gray-500  group-hover:text-gray-900">
                               {transaction.name}
                             </p>
                           </a>
                         </div>
                       </td>
                       <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
-                        <span className="text-gray-900 font-medium">
+                        <span className="text-blue-900 font-medium">
                           {transaction.amount}{" "}
                         </span>
-                        {transaction.currency}
+                        <span className="text-blue-600 font-bold">
+                          {transaction.currency}
+                        </span>
                       </td>
-                      <td className="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
                         <time dateTime={transaction.datetime}>
                           {transaction.date}
                         </time>
                       </td>
-                      <td className="hidden px-6 py-4 whitespace-nowrap text-sm text-gray-500 md:block">
-                        <span
+                      <td className="hidden px-6 py-4 whitespace-nowrap text-right text-sm text-gray-500 md:block">
+                        {/* <span
                           className={classNames(
                             // statusStyles[transaction.status],
                             "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize"
                           )}>
                           {transaction.status}
-                        </span>
+                        </span> */}
+                        <button
+                          type="button"
+                          className={classNames(
+                            transaction.color,
+                            "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          )}>
+                          {transaction.status}
+                        </button>
                       </td>
                     </tr>
                   ))}
