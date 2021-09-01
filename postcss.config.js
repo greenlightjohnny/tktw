@@ -25,15 +25,28 @@
 // module.exports = {
 //   plugins: [
 //     tailwindcss,
-//     //require('tailwindcss'),
+//     require('tailwindcss'),
 //     require('autoprefixer'),
 //   ],
 // }
 
+// module.exports = {
+//   plugins: {
+//     tailwindcss: { config: './tailwind-config.js' },
+//     tailwindcss: require('tailwindcss'),
+//     autoprefixer: require('autoprefixer'),
+//   },
+// }
 module.exports = {
-  plugins: {
-    //tailwindcss: { config: './tailwind-config.js' },
-    tailwindcss: require('tailwindcss'),
-    autoprefixer: require('autoprefixer'),
-  },
+  plugins: [
+    require('postcss-import'),
+    //require('tailwindcss/nesting'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
 }
+// export const plugins = [
+
+//   require('tailwindcss'),
+//   require('autoprefixer'),
+// ];

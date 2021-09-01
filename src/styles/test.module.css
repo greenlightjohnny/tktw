@@ -1,0 +1,71 @@
+.menu-card {
+  @apply flex flex-col justify-center 
+    items-center bg-white h-screen font-mono py-40;
+}
+
+.menu-text {
+  @apply flex flex-col justify-center items-center;
+}
+
+.grey-border {
+  @apply border-solid border-2 border-gray-500 
+    border-opacity-30 rounded-md;
+}
+.grey-border-inner {
+  @apply flex flex-row justify-between 
+    border-solid  border-2 border-gray-500 
+    border-opacity-30 ml-2 mr-2 mt-4;
+}
+
+.grey-border-inner-v2 {
+  @apply grey-border-inner pl-2 pr-2 sm:pl-4 sm:pr-4 pt-2 pb-2;
+}
+
+.grey-border-inner-v3 {
+  @apply flex flex-col md:flex-row 
+    justify-between border-solid border-2
+    border-gray-500 border-opacity-30
+     ml-2 mr-2 mt-4;
+}
+
+.grey-border-v2 {
+  @apply border-solid border-2 border-gray-500 
+    rounded-md border-opacity-30 flex flex-col text-sm sm:text-base
+    justify-between md:ml-4;
+}
+
+.app-btn {
+  @apply py-2 px-3 sm:px-5  
+    rounded-md text-white text-sm sm:text-base 
+    transition duration-300 ease-in-out
+    flex items-center w-36 sm:w-36 text-center
+    justify-center;
+}
+
+.more-btn {
+  @apply inline-flex px-4 py-1 rounded-full
+    text-sm leading-5 font-semibold tracking-wide
+    bg-indigo-100 text-indigo-600;
+}
+
+.purple-btn {
+  @apply bg-gradient-to-r
+    from-purple-600 to-indigo-600 hover:from-purple-700
+    hover:to-indigo-700;
+}
+
+.sidebar-text {
+  @apply text-base font-medium  
+    text-gray-900 hover:text-gray-900 pt-2 pb-2 pl-2
+    transition duration-150 ease-in-out  hover:bg-gray-50 
+    focus:outline-none focus:text-gray-900 rounded-md
+    focus:bg-gray-50;
+}
+
+.dropdown-nav-link {
+  @apply block px-3 
+    py-2 rounded-md text-base font-medium 
+    text-gray-700 hover:text-gray-900 hover:bg-gray-50 
+    focus:outline-none focus:text-gray-900 
+    focus:bg-gray-50 transition duration-150 ease-in-out;
+}
