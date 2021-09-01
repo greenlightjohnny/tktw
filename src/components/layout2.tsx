@@ -17,7 +17,7 @@ import {
 } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
 import { Link, NavLink } from "react-router-dom";
-//import Stone from "../images/stones.png";
+import Stones from "../images/stones.png";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
@@ -163,11 +163,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0">
             <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
-              <img
-                className="h-12 w-auto"
-                src="https://www.stonealgo.com/static/dist/img/email/StoneAlgo_Logo_rect_transparent.png"
-                alt="Workflow"
-              />
+              <img className="h-12 w-auto" src={Stones} alt="Workflow" />
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
               <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
@@ -240,11 +236,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 <div>
                   <Menu.Button className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     <span className="sr-only">Open user menu</span>
-                    <img
-                      className="h-8 w-8 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
+                    <CogIcon className="h-6 w-6" aria-hidden="true" />
                   </Menu.Button>
                 </div>
                 <Transition

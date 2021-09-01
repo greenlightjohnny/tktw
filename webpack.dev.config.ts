@@ -2,7 +2,7 @@ import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import CopyWebpackPlugin from "copy-webpack-plugin";
+//import CopyWebpackPlugin from "copy-webpack-plugin";
 
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 //import * as webpackDevServer from "webpack-dev-server";
@@ -19,8 +19,8 @@ const config: Configuration = {
 
   entry: path.join(__dirname, "src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "./build"),
-    filename: "js/[name]-[chunkhash]-dev.js",
+    //path: path.resolve(__dirname, "./build"),
+    //filename: "js/[name]-[chunkhash]-dev.js",
     publicPath: "/",
   },
   module: {
@@ -50,11 +50,15 @@ const config: Configuration = {
               //include: path.resolve(__dirname, "src/index.css"),
             },
           },
-          "style-loader",
+          //"style-loader",
           "css-loader",
           "postcss-loader",
         ],
         //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       // {
       //   test: /\.(png|jp(e*)g|svg)$/,
