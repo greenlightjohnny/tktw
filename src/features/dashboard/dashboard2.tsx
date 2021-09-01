@@ -31,8 +31,8 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
-import Feeds from "./components2/notifications";
-import Feeds2 from "./components2/notifications3";
+import Feeds from "./components/notifications";
+import Feeds2 from "./components/notifications3";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },

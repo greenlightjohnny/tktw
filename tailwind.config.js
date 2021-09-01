@@ -7,24 +7,7 @@ module.exports = {
      './src/*.html',
      './src/*.tsx',
     ]
-    // content: ['./src/**/*.{js,jsx,ts,tsx}', 
-    // './src/**/*.html',
-    // './src/index.html',
-    //  './build/index.html', 
-    //  './build/**/*.{js,jsx,ts,tsx}',
-    //   './build/*.{js,jsx,ts,tsx}',
-    //   '/src/**/*.{js,jsx,ts,tsx}', 
-    // '/src/index.html',
-    //  '/build/index.html', 
-    //  '/build/**/*.{js,jsx,ts,tsx}',
-    //   '/build/*.{js,jsx,ts,tsx}',
-    //   'src/**/*.{js,jsx,ts,tsx}', 
-    // 'src/index.html',
-    //  'build/index.html', 
-    //  'build/**/*.{js,jsx,ts,tsx}',
-    //   'build/*.{js,jsx,ts,tsx}'
-
-    // ],
+    
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
