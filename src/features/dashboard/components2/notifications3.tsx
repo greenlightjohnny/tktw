@@ -63,18 +63,18 @@ function classNames(...classes: string[]) {
 
 const Feeds: React.FC = () => {
   return (
-    <div>
-      <h3 className="text-lg leading-6 font-medium text-gray-900">
+    <div className="flex-1">
+      <h3 className="text-lg leadin-6 font-medium text-gray-900">
         Notifications
       </h3>
       <div
         className="flow-root border-solid bg-white rounded-md   
-    mr-0 lg:mr-8 mb-8 shadow-md">
+    mr-0 lg:mr-0 mb-8 shadow-md">
         {/* <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3> */}
         <ul role="list" className="mb-8 ">
           <li>
-            <div className="rounded-md bg-green-50 p-4 mb-4">
-              <div className="flex">
+            <div className="rounded-md bg-green-50 p-4 mb-4 mt-8">
+              <div className="flex flex-1">
                 <div className="flex-shrink-0">
                   <CheckCircleIcon
                     className="h-5 w-5 text-green-400"

@@ -2,6 +2,7 @@ import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 //import * as webpackDevServer from "webpack-dev-server";
@@ -16,10 +17,10 @@ interface Configuration extends WebpackConfiguration {
 const config: Configuration = {
   mode: "development",
 
-  entry: "./src/index.tsx",
+  entry: path.join(__dirname, "src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "./build"),
+    filename: "js/[name]-[chunkhash]-dev.js",
     publicPath: "/",
   },
   module: {
@@ -41,17 +42,46 @@ const config: Configuration = {
       {
         test: /\.css$/,
 
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+              //include: path.resolve(__dirname, "src/index.css"),
+            },
+          },
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+        ],
         //use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
+      // {
+      //   test: /\.(png|jp(e*)g|svg)$/,
+      //   use: [
+      //     {
+      //       loader: "url-loader",
+      //       options: {
+      //         limit: 8000,
+      //         name: "images/[hash]-[name].[ext]",
+      //         publicPath: "images",
+      //       },
+      //     },
+      //   ],
+      // },
     ],
   },
   resolve: {
+    // modules: [
+    //   path.resolve("./src/"),
+    //   "node_modules",
+    //   path.resolve("./images/"),
+    // ],
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "src/index.html",
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
@@ -60,6 +90,7 @@ const config: Configuration = {
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
+
     new MiniCssExtractPlugin({
       filename: "styles.css",
       chunkFilename: "[name]-dev2.css",

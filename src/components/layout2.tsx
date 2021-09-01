@@ -17,6 +17,7 @@ import {
 } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
 import { Link, NavLink } from "react-router-dom";
+//import Stone from "../images/stones.png";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
@@ -118,7 +119,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
               <div className="flex-shrink-0 flex items-center px-4">
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                  src="https://www.stonealgo.com/static/dist/img/email/StoneAlgo_Logo_rect_transparent.png"
                   alt="Workflow"
                 />
               </div>
@@ -163,8 +164,8 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
           <div className="flex-1 flex flex-col min-h-0">
             <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                className="h-12 w-auto"
+                src="https://www.stonealgo.com/static/dist/img/email/StoneAlgo_Logo_rect_transparent.png"
                 alt="Workflow"
               />
             </div>

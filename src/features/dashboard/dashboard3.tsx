@@ -8,8 +8,7 @@ import RecentDiamonds from "../../features/recentDiamonds/recentDiamonds";
 const Dashboard: React.FC = () => {
   return (
     <>
-      <div className=" flex flex-col lg:flex-row justify-between">
-        <Feed />
+      <div className=" flex flex-grow-1 flex-row lg:flex-row justify-between">
         <Notifications />
       </div>
       <div className="">
