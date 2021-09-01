@@ -63,134 +63,139 @@ function classNames(...classes: string[]) {
 
 const Feeds: React.FC = () => {
   return (
-    <div
-      className="flow-root border-solid bg-white rounded-md  border-2 border-gray-500 
-    border-opacity-30 mr-0 lg:mr-8 mb-8 shadow-md">
-      <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3>
-      <ul role="list" className="mb-8 ">
-        <li>
-          <div className="rounded-md bg-green-50 p-4 mb-4">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <CheckCircleIcon
-                  className="h-5 w-5 text-green-400"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="ml-3">
-                <p className="text-sm font-medium text-green-800">
-                  Cambell Jewelers would like to reschedule their appointment
-                  for 10/18
-                </p>
-              </div>
-              <div className="ml-auto pl-3">
-                <div className="-mx-1.5 -my-1.5">
-                  <button
-                    type="button"
-                    className="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
-                    <span className="sr-only">Dismiss</span>
-                    <XIcon className="h-5 w-5" aria-hidden="true" />
-                  </button>
+    <div>
+      <h3 className="text-lg leading-6 font-medium text-gray-900">
+        Notifications
+      </h3>
+      <div
+        className="flow-root border-solid bg-white rounded-md   
+    mr-0 lg:mr-8 mb-8 shadow-md">
+        {/* <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3> */}
+        <ul role="list" className="mb-8 ">
+          <li>
+            <div className="rounded-md bg-green-50 p-4 mb-4">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <CheckCircleIcon
+                    className="h-5 w-5 text-green-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-green-800">
+                    Cambell Jewelers would like to reschedule their appointment
+                    for 10/18
+                  </p>
+                </div>
+                <div className="ml-auto pl-3">
+                  <div className="-mx-1.5 -my-1.5">
+                    <button
+                      type="button"
+                      className="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
+                      <span className="sr-only">Dismiss</span>
+                      <XIcon className="h-5 w-5" aria-hidden="true" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div className="rounded-md bg-yellow-50 p-4 mb-4">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <ExclamationIcon
-                  className="h-5 w-5 text-yellow-400"
-                  aria-hidden="true"
-                />
+          </li>
+          <li>
+            <div className="rounded-md bg-yellow-50 p-4 mb-4">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <ExclamationIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-yellow-800">
+                    Price Alert
+                  </h3>
+                  <div className="mt-2 text-sm text-yellow-700">
+                    <p>
+                      GIA 12353455 has a current price of $10,888 below your
+                      alert level of $10,832.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="ml-3">
-                <h3 className="text-sm font-medium text-yellow-800">
-                  Price Alert
-                </h3>
-                <div className="mt-2 text-sm text-yellow-700">
-                  <p>
+            </div>
+          </li>
+          <li>
+            <div className="rounded-md bg-red-50 p-4 mb-4">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <XCircleIcon
+                    className="h-5 w-5 text-red-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-red-800">
+                    Schedule Change
+                  </h3>
+                  <div className="mt-2 text-sm text-red-700">
+                    <ul role="list" className="list-disc pl-5 space-y-1">
+                      <li>Cambel Jewelers 9/05</li>
+                      <li>Reschedule appointment request for 10/18</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="rounded-md bg-blue-50 p-4 mb-4">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <InformationCircleIcon
+                    className="h-5 w-5 text-blue-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3 flex-1 md:flex md:justify-between">
+                  <p className="text-sm text-blue-700">
                     GIA 12353455 has a current price of $10,888 below your alert
-                    level of $10,832.
+                    level of $10,832
+                  </p>
+                  <p className="mt-3 text-sm md:mt-0 md:ml-6">
+                    <a
+                      href="#"
+                      className="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">
+                      Details <span aria-hidden="true">&rarr;</span>
+                    </a>
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div className="rounded-md bg-red-50 p-4 mb-4">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <XCircleIcon
-                  className="h-5 w-5 text-red-400"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="ml-3">
-                <h3 className="text-sm font-medium text-red-800">
-                  Schedule Change
-                </h3>
-                <div className="mt-2 text-sm text-red-700">
-                  <ul role="list" className="list-disc pl-5 space-y-1">
-                    <li>Cambel Jewelers 9/05</li>
-                    <li>Reschedule appointment request for 10/18</li>
-                  </ul>
+          </li>
+          <li>
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-2">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <ExclamationIcon
+                    className="h-5 w-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm text-yellow-700">
+                    Warning{" "}
+                    <a
+                      href="#"
+                      className="font-medium underline text-yellow-700 hover:text-yellow-600">
+                      GIA 12353455 has a current price of $10,888 below your
+                      alert level of $10,832
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div className="rounded-md bg-blue-50 p-4 mb-4">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <InformationCircleIcon
-                  className="h-5 w-5 text-blue-400"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="ml-3 flex-1 md:flex md:justify-between">
-                <p className="text-sm text-blue-700">
-                  GIA 12353455 has a current price of $10,888 below your alert
-                  level of $10,832
-                </p>
-                <p className="mt-3 text-sm md:mt-0 md:ml-6">
-                  <a
-                    href="#"
-                    className="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">
-                    Details <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-2">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <ExclamationIcon
-                  className="h-5 w-5 text-yellow-400"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="ml-3">
-                <p className="text-sm text-yellow-700">
-                  Warning{" "}
-                  <a
-                    href="#"
-                    className="font-medium underline text-yellow-700 hover:text-yellow-600">
-                    GIA 12353455 has a current price of $10,888 below your alert
-                    level of $10,832
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import {
   InboxIcon,
   MenuAlt2Icon,
   SaveIcon,
+  CurrencyDollarIcon,
   UsersIcon,
   CogIcon,
   XIcon,
@@ -23,6 +24,12 @@ const navigation = [
     name: "Notifications",
     href: "/notifications",
     icon: BellIcon,
+    current: false,
+  },
+  {
+    name: "Price Alerts",
+    href: "/price-alerts",
+    icon: CurrencyDollarIcon,
     current: false,
   },
   {
