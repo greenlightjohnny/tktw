@@ -4,12 +4,14 @@ import Hero from "../features/dashboard/dashboard2";
 import Notifications from "../features/notifications/notifications";
 import Dashboard from "../features/dashboard/dashboard3";
 import Alerts from "../features/priceAlerts/alerts2";
+import Appointments from "../features/appointments/appointments";
 
 const routes = (
   <Switch>
     <Route exact path="/" component={Dashboard} />
     <Route exact path="/notifications" component={Notifications}></Route>
     <Route exact path="/price-alerts" component={Alerts}></Route>
+    <Route exact path="/appointments" component={Appointments}></Route>
   </Switch>
 );
 

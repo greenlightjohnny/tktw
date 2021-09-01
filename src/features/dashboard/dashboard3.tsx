@@ -2,6 +2,7 @@ import React from "react";
 import Notifications from "./components2/notifications3";
 import Feed from "./components2/notifications";
 import Alert from "../../features/priceAlerts/alerts2";
+import Appointments from "../../features/appointments/appointments";
 
 const Dashboard: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Dashboard: React.FC = () => {
       <div className="">
         <Alert />
       </div>
+      <Appointments />
     </>
   );
 };
