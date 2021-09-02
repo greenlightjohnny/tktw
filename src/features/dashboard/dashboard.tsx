@@ -15,20 +15,19 @@ const Dashboard: React.FC = () => {
       </div>
       <div className="flex flex-col lg:flex-col ">
         <App2 />
-        <App3 />
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between">
-        <Feed />
         <Appointments />
-      </div>
-      <div className="flex flex-col lg:flex-row justify-between">
-        <RecentDiamonds />
         <RecentDiamonds />
       </div>
-      <div className="">
+      <div className="mt-8">
         <Alert />
       </div>
+      {/* <div className="flex flex-col lg:flex-row justify-between">
+        <RecentDiamonds />
+        <RecentDiamonds />
+      </div> */}
     </>
   );
 };

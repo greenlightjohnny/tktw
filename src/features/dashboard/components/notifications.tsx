@@ -18,27 +18,27 @@ const timeline = [
     icon: BellIcon,
     iconBackground: "bg-gray-400",
   },
-  {
-    id: 2,
-    content:
-      "Price Alert: GIA 12353455 has a current price of $10,888 below your alert level of $10,832.",
-    target: "More",
-    href: "#",
-    date: "Sep 22",
-    datetime: "2020-09-22",
-    icon: BellIcon,
-    iconBackground: "bg-blue-200",
-  },
-  {
-    id: 3,
-    content: "Cambell Jewelers would like to reschedule their appointment for",
-    target: "10/18",
-    href: "#",
-    date: "Sep 28",
-    datetime: "2020-09-28",
-    icon: CheckIcon,
-    iconBackground: "bg-green-300",
-  },
+  // {
+  //   id: 2,
+  //   content:
+  //     "Price Alert: GIA 12353455 has a current price of $10,888 below your alert level of $10,832.",
+  //   target: "More",
+  //   href: "#",
+  //   date: "Sep 22",
+  //   datetime: "2020-09-22",
+  //   icon: BellIcon,
+  //   iconBackground: "bg-blue-200",
+  // },
+  // {
+  //   id: 3,
+  //   content: "Cambell Jewelers would like to reschedule their appointment for",
+  //   target: "10/18",
+  //   href: "#",
+  //   date: "Sep 28",
+  //   datetime: "2020-09-28",
+  //   icon: CheckIcon,
+  //   iconBackground: "bg-green-300",
+  // },
   {
     id: 4,
     content:

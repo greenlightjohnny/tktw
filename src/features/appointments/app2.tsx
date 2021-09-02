@@ -97,13 +97,13 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative  flex flex-col overflow-hidden bg-gray-100 mb-10 shadow-md">
-      <h2 className="  mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-0">
+    <div className="relative  flex flex-col overflow-hidden bg-gray-100 mb-10">
+      <h2 className="  mt-4 -mb-2 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-0">
         Appointments
       </h2>
 
       {/* Activity list (smallest breakpoint only) */}
-      <div className="shadow sm:hidden">
+      <div className="shadow-md sm:hidden">
         <ul
           role="list"
           className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
@@ -240,8 +240,8 @@ export default function Example() {
                 <div className="hidden sm:block">
                   <p className="text-sm text-gray-700">
                     Showing <span className="font-medium">1</span> to{" "}
-                    <span className="font-medium">10</span> of{" "}
-                    <span className="font-medium">20</span> results
+                    <span className="font-medium">3</span> of{" "}
+                    <span className="font-medium">3</span> results
                   </p>
                 </div>
                 <div className="flex-1 flex justify-between sm:justify-end">

@@ -47,7 +47,7 @@ function classNames(...classes: string[]) {
 
 const RecentDiamonds: React.FC = () => {
   return (
-    <div className="mt-10 flex-1">
+    <div className="mt-0 flex-1">
       <h3 className="text-lg mb- leading-6 font-medium text-gray-900">
         Recent Diamonds
       </h3>

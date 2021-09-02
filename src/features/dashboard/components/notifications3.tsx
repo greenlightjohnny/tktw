@@ -71,9 +71,9 @@ const Feeds: React.FC = () => {
         className="flow-root border-solid bg-white rounded-md   
     mr-0 lg:mr-0 mb-8 shadow-md">
         {/* <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3> */}
-        <ul role="list" className="mb-8 ">
+        <ul role="list" className="mb-0 ">
           <li>
-            <div className="rounded-md bg-green-50 p-4 mb-4 mt-8">
+            <div className="rounded-md bg-green-50 p-4  ">
               <div className="flex flex-1">
                 <div className="flex-shrink-0">
                   <CheckCircleIcon
@@ -100,7 +100,7 @@ const Feeds: React.FC = () => {
               </div>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className="rounded-md bg-yellow-50 p-4 mb-4">
               <div className="flex">
                 <div className="flex-shrink-0">
@@ -170,9 +170,9 @@ const Feeds: React.FC = () => {
                 </div>
               </div>
             </div>
-          </li>
+          </li> */}
           <li>
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-2">
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 ">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <ExclamationIcon
