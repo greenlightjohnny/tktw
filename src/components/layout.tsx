@@ -73,7 +73,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="h-screen flex overflow-hidden bg-gray-100">
+    <div className="h-screen flex overflow-hidden bg-gray-50">
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
@@ -162,11 +162,11 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         <div className="flex flex-col w-64">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0">
-            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
+            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-blue-900">
               <img className="h-12 w-auto" src={Stones} alt="Workflow" />
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
-              <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
+              <nav className="flex-1 px-2 py-4 bg-blue-900 space-y-1">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
@@ -195,7 +195,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         </div>
       </div>
       <div className="flex flex-col w-0 flex-1 overflow-hidden">
-        <div className="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
+        <div className="relative z-10 flex-shrink-0 flex h-10 b">
           <button
             type="button"
             className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
@@ -205,7 +205,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
           </button>
           <div className="flex-1 px-4 flex justify-between">
             <div className="flex-1 flex">
-              <form className="w-full flex md:ml-0" action="#" method="GET">
+              {/* <form className="w-full flex md:ml-0" action="#" method="GET">
                 <label htmlFor="search-field" className="sr-only">
                   Search
                 </label>
@@ -221,7 +221,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                     name="search"
                   />
                 </div>
-              </form>
+              </form> */}
             </div>
             <div className="ml-4 flex items-center md:ml-6">
               <button
@@ -270,7 +270,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         </div>
 
         <main className="flex-1 relative overflow-y-auto focus:outline-none">
-          <div className="py-6">
+          <div className="pb-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               {/* <h1 className="text-2xl font-semibold text-gray-900">
                 Dashboard

@@ -1,30 +1,4 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          cyan: colors.cyan,
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-import React, { Fragment, useState } from "react";
-import { Dialog, Menu, Transition } from "@headlessui/react";
+import React from "react";
 import {
   BellIcon,
   ClockIcon,
@@ -47,6 +21,7 @@ import {
   ExclamationIcon,
   OfficeBuildingIcon,
   SearchIcon,
+  CalendarIcon,
 } from "@heroicons/react/solid";
 
 const transactions = [
@@ -59,7 +34,7 @@ const transactions = [
     status: "Confirm",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-green-100 text-green-800",
+    color: "bg-green-100 text-black",
   },
   {
     id: 2,
@@ -70,7 +45,7 @@ const transactions = [
     status: "Pending",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-yellow-100 text-yellow-800",
+    color: "bg-blue-100 text-black",
   },
   {
     id: 1,
@@ -97,13 +72,13 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative  flex flex-col overflow-hidden  mb-10">
-      <h2 className="  mt-4 -mb-2 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-0">
+    <div className="relative  flex flex-col   mb-10">
+      <h2 className="  mt-4 -mb-2 px-0 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide sm:px-0 lg:px-0">
         Appointments
       </h2>
 
       {/* Activity list (smallest breakpoint only) */}
-      <div className=" sm:hidden">
+      <div className=" shadow-md sm:hidden">
         <ul
           role="list"
           className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
@@ -160,10 +135,10 @@ export default function Example() {
       </div>
 
       {/* Activity table (small breakpoint and up) */}
-      <div className="hidden sm:block shadow-lg">
-        <div className="shadow-lg mx-auto px-4 sm:px-6 lg:px-0 ">
-          <div className="flex flex-col mt-2">
-            <div className="align-middle min-w-full overflow-x-auto shadow-lg overflow-hidden">
+      <div className="hidden sm:block shadow-md">
+        <div className=" mx-auto px-0 sm:px-0 lg:px-0 ">
+          <div className="flex flex-col mt-2 ">
+            <div className="align-middle min-w-full overflow-x-auto overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-white">
                   <tr>
@@ -189,8 +164,8 @@ export default function Example() {
                           <a
                             href={transaction.href}
                             className="group inline-flex space-x-2 truncate text-sm">
-                            <ExclamationIcon
-                              className="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                            <CalendarIcon
+                              className="flex-shrink-0 h-5 w-5 text-blue-900 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
                             <p className="text-gray-500  group-hover:text-gray-900">
@@ -224,7 +199,7 @@ export default function Example() {
                           type="button"
                           className={classNames(
                             transaction.color,
-                            "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            "w-20 inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                           )}>
                           {transaction.status}
                         </button>
