@@ -63,8 +63,8 @@ function classNames(...classes: string[]) {
 
 const Feeds: React.FC = () => {
   return (
-    <div className="flex-1">
-      <h3 className="text-lg leadin-6 font-medium text-gray-900">
+    <div className="flex-1 bg-white ml-0 lg:ml-8 mb-10 shadow-md ">
+      <h3 className=" pt-4 pl-4 pb-4 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
         Notifications
       </h3>
       <div
@@ -145,9 +145,9 @@ const Feeds: React.FC = () => {
                 </div>
               </div>
             </div>
-          </li>
+          </li>*/}
           <li>
-            <div className="rounded-md bg-blue-50 p-4 mb-4">
+            <div className="rounded-md bg-blue-50 p-4 mb-0">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <InformationCircleIcon
@@ -170,7 +170,7 @@ const Feeds: React.FC = () => {
                 </div>
               </div>
             </div>
-          </li> */}
+          </li>
           <li>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 ">
               <div className="flex">

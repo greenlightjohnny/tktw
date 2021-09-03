@@ -162,11 +162,11 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         <div className="flex flex-col w-64">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0">
-            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-blue-900">
+            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
               <img className="h-12 w-auto" src={Stones} alt="Workflow" />
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
-              <nav className="flex-1 px-2 py-4 bg-blue-900 space-y-1">
+              <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
@@ -226,7 +226,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
             <div className="ml-4 flex items-center md:ml-6">
               <button
                 type="button"
-                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                className=" p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 <span className="sr-only">View notifications</span>
                 <BellIcon className="h-6 w-6" aria-hidden="true" />
               </button>
@@ -234,7 +234,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
               {/* Profile dropdown */}
               <Menu as="div" className="ml-3 relative">
                 <div>
-                  <Menu.Button className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <Menu.Button className="max-w-xs  flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     <span className="sr-only">Open user menu</span>
                     <CogIcon className="h-6 w-6" aria-hidden="true" />
                   </Menu.Button>

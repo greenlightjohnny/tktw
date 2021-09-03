@@ -72,8 +72,8 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative  flex flex-col   mb-10">
-      <h2 className="  mt-4 -mb-2 px-0 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide sm:px-0 lg:px-0">
+    <div className="relative  flex flex-col bg-white  mb-10">
+      <h2 className="  mt-4 -mb-2 px-0 pl-4 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide ">
         Appointments
       </h2>
 
@@ -89,27 +89,35 @@ export default function Example() {
                 className="block px-4 py-4 bg-white hover:bg-gray-50">
                 <span className="flex items-center space-x-4">
                   <span className="flex-1 flex space-x-2 truncate">
-                    <CashIcon
-                      className="flex-shrink-0 h-5 w-5 text-gray-400"
+                    <CalendarIcon
+                      className="flex-shrink-0 h-5 w-5 text-blue-400"
                       aria-hidden="true"
                     />
                     <span className="flex flex-col text-gray-500 text-sm truncate">
                       <span className="truncate">{transaction.name}</span>
-                      <span>
-                        <span className="text-gray-900 font-medium">
+                      <span className="text-gray-900 font-medium">
+                        {/* <span className="text-gray-900 font-medium">
                           {transaction.amount}
-                        </span>{" "}
+                        </span>{" "} */}
                         {transaction.currency}
                       </span>
                       <time dateTime={transaction.datetime}>
-                        {transaction.date}
+                        {transaction.amount}
                       </time>
                     </span>
                   </span>
-                  <ChevronRightIcon
+                  {/* <ChevronRightIcon
                     className="flex-shrink-0 h-5 w-5 text-gray-400"
                     aria-hidden="true"
-                  />
+                  /> */}
+                  <button
+                    type="button"
+                    className={classNames(
+                      transaction.color,
+                      "w-20 inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    )}>
+                    {transaction.status}
+                  </button>
                 </span>
               </a>
             </li>
@@ -148,7 +156,7 @@ export default function Example() {
                     <th className="px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Date
                     </th>
-                    <th className="hidden px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block">
+                    <th className=" px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Time
                     </th>
                     <th className="px-6 py-3  text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -165,7 +173,7 @@ export default function Example() {
                             href={transaction.href}
                             className="group inline-flex space-x-2 truncate text-sm">
                             <CalendarIcon
-                              className="flex-shrink-0 h-5 w-5 text-blue-900 group-hover:text-gray-500"
+                              className="flex-shrink-0 h-5 w-5 hidden sm:block text-blue-900 group-hover:text-gray-500"
                               aria-hidden="true"
                             />
                             <p className="text-gray-500  group-hover:text-gray-900">
@@ -187,7 +195,7 @@ export default function Example() {
                           {transaction.amount}
                         </time>
                       </td>
-                      <td className="hidden px-6 py-4 whitespace-nowrap text-right text-sm text-gray-500 md:block">
+                      <td className=" px-6 py-4 whitespace-nowrap text-right text-sm text-gray-500">
                         {/* <span
                           className={classNames(
                             // statusStyles[transaction.status],
