@@ -30,7 +30,7 @@ function classNames(...classes: string[]) {
 const Alert: React.FC = () => {
   return (
     <div
-      className="flow-root border-solid bg-white rounded-md  border-2 border-gray-500 
+      className="flow-root border-solid bg-white border-2 border-gray-500 
   border-opacity-30 mr-0 lg:mr-8 mb-8 shadow-md">
       <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Price Alerts</h3>
       <ul

@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Example() {
   return (
-    <div className="rounded-md bg-green-50 p-4">
+    <div className=" bg-green-50 p-4">
       <div className="flex">
         <div className="flex-shrink-0">
           <CheckCircleIcon

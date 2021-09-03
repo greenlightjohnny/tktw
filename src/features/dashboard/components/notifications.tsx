@@ -64,7 +64,7 @@ const Feeds: React.FC = () => {
       </h3>
 
       <div
-        className="flow-root  bg-white rounded-md  
+        className="flow-root  bg-white  
    mr-0 lg:mr-8 mb-8 shadow-md">
         <ul role="list" className="mb-8 ">
           {timeline.map((event, eventIdx) => (

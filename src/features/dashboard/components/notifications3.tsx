@@ -68,7 +68,7 @@ const Feeds: React.FC = () => {
         Notifications
       </h3>
       <div
-        className="flow-root border-solid bg-white rounded-md   
+        className="flow-root border-solid bg-white    
     mr-0 lg:mr-0 mb-8 shadow-md">
         {/* <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3> */}
         <ul role="list" className="mb-0 ">

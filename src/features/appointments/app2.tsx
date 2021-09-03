@@ -54,7 +54,7 @@ const transactions = [
     id: 1,
     name: "Campbell Jewelers",
     href: "#",
-    amount: "Cambell Jewelers would like to reschedule their appointment for",
+    amount: "2:00PM",
     currency: "10/3/2021",
     status: "Confirm",
     date: "July 11, 2020",
@@ -65,7 +65,7 @@ const transactions = [
     id: 2,
     name: "Campbell Jewelers",
     href: "#",
-    amount: "Cambell Jewelers would like to reschedule their appointment for",
+    amount: "1:00PM",
     currency: "8/19/2021",
     status: "Pending",
     date: "July 11, 2020",
@@ -76,7 +76,7 @@ const transactions = [
     id: 1,
     name: "Campbell Jewelers",
     href: "#",
-    amount: "Cambell Jewelers would like to reschedule their appointment for",
+    amount: "3:00PM",
     currency: "9/20/2021",
     status: "View",
     date: "July 11, 2020",
@@ -97,13 +97,13 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative  flex flex-col overflow-hidden bg-gray-100 mb-10">
+    <div className="relative  flex flex-col overflow-hidden  mb-10">
       <h2 className="  mt-4 -mb-2 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-0">
         Appointments
       </h2>
 
       {/* Activity list (smallest breakpoint only) */}
-      <div className="shadow-md sm:hidden">
+      <div className=" sm:hidden">
         <ul
           role="list"
           className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
@@ -160,23 +160,23 @@ export default function Example() {
       </div>
 
       {/* Activity table (small breakpoint and up) */}
-      <div className="hidden sm:block shadow-md">
-        <div className=" mx-auto px-4 sm:px-6 lg:px-0 ">
+      <div className="hidden sm:block shadow-lg">
+        <div className="shadow-lg mx-auto px-4 sm:px-6 lg:px-0 ">
           <div className="flex flex-col mt-2">
-            <div className="align-middle min-w-full overflow-x-auto shadow overflow-hidden sm:rounded-lg">
+            <div className="align-middle min-w-full overflow-x-auto shadow-lg overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead>
+                <thead className="bg-white">
                   <tr>
-                    <th className="px-6 py-3 bg-gray-300 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Name
                     </th>
-                    <th className="px-6 py-3 bg-gray-300 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Description
-                    </th>
-                    <th className="hidden px-6 py-3 bg-gray-300 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block">
+                    <th className="px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Date
                     </th>
-                    <th className="px-6 py-3 bg-gray-300 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="hidden px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block">
+                      Time
+                    </th>
+                    <th className="px-6 py-3  text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Action
                     </th>
                   </tr>
@@ -200,16 +200,16 @@ export default function Example() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
-                        <span className="text-blue-900 font-medium">
+                        {/* <span className="text-blue-900 font-medium">
                           {transaction.amount}{" "}
-                        </span>
+                        </span> */}
                         <span className="text-blue-600 font-bold">
                           {transaction.currency}
                         </span>
                       </td>
                       <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
                         <time dateTime={transaction.datetime}>
-                          {transaction.date}
+                          {transaction.amount}
                         </time>
                       </td>
                       <td className="hidden px-6 py-4 whitespace-nowrap text-right text-sm text-gray-500 md:block">

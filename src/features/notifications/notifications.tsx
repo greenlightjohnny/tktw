@@ -66,7 +66,7 @@ const Notifications: React.FC = () => {
       <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3>
       <ul role="list" className="mb-8 ">
         <li>
-          <div className="rounded-md bg-green-50 p-4 mb-4">
+          <div className=" bg-green-50 p-4 mb-4">
             <div className="flex">
               <div className="flex-shrink-0">
                 <CheckCircleIcon

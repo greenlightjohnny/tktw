@@ -36,7 +36,7 @@ const Alerts: React.FC = () => {
         Price Alerts
       </h3>
       <dl
-        className="mt-0 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow-md
+        className="mt-0 grid grid-cols-1 bg-white overflow-hidden shadow-md
        shadow divide-y divide-gray-200 md:grid-cols-2 lg:grid-cols-3 md:divide-y-0 md:divide-x">
         {stats.map((item) => (
           <div key={item.name} className="px-4 py-5 sm:p-6">
