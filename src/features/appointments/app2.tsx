@@ -1,28 +1,6 @@
 import React from "react";
-import {
-  BellIcon,
-  ClockIcon,
-  CogIcon,
-  CreditCardIcon,
-  DocumentReportIcon,
-  HomeIcon,
-  MenuAlt1Icon,
-  QuestionMarkCircleIcon,
-  ScaleIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
-  XIcon,
-} from "@heroicons/react/outline";
-import {
-  CashIcon,
-  CheckCircleIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  ExclamationIcon,
-  OfficeBuildingIcon,
-  SearchIcon,
-  CalendarIcon,
-} from "@heroicons/react/solid";
+
+import { CalendarIcon } from "@heroicons/react/solid";
 
 const transactions = [
   {
@@ -69,8 +47,7 @@ const statusStyles = {
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
-
-export default function Example() {
+const Appointments: React.FC = () => {
   return (
     <div className="relative  flex flex-col   mb-10">
       <h2 className="   mb-0 px-0 pl-4 text-base bg-white pt-4 leading-6 font-semibold text-gray-600 uppercase tracking-wide ">
@@ -246,4 +223,6 @@ export default function Example() {
       </div>
     </div>
   );
-}
+};
+
+export default Appointments;

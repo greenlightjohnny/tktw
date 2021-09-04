@@ -5,6 +5,7 @@ import {
   GlobeIcon,
 } from "@heroicons/react/outline";
 import React from "react";
+
 const people = [
   {
     name: "GIA 123325234",

@@ -20,8 +20,13 @@ const products = [
 const SaveDiamonds: React.FC = () => {
   return (
     <div className="flex-1 bg-white mr-0 lg:mr-8 mb-10">
-      <div className="max-w-2xl mx-auto  px-4 py-0  lg:max-w-7xl pb-0 shadow-md">
-        <h2 className=" pt-4  pb-4 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
+      <div
+        className="max-w-2xl mx-auto  
+      px-4 py-0  lg:max-w-7xl pb-0 shadow-md">
+        <h2
+          className=" pt-4 
+        pb-4 leadin-6 text-base leading-6
+        font-semibold text-gray-600 uppercase tracking-wide">
           Saved Diamonds
         </h2>
 
@@ -51,7 +56,12 @@ const SaveDiamonds: React.FC = () => {
                   <div>
                     <button
                       type="button"
-                      className="inline-flex items-center mt-4 px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="inline-flex items-center 
+                      mt-4 px-3 py-2 border
+                      border-transparent text-sm leading-4
+                      font-medium rounded-md text-indigo-700
+                      bg-indigo-100 hover:bg-indigo-200 focus:outline-none
+                      focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       View
                     </button>
                   </div>
@@ -73,10 +83,14 @@ const SaveDiamonds: React.FC = () => {
                     <p className="mt-1 text-sm text-gray-500">Price History</p>
                   </div>
                 </div>
-                <div className="absolute top-0 inset-x-0 h-72 rounded-lg p-4 flex items-end justify-end overflow-hidden">
+                <div
+                  className="absolute top-0 
+                inset-x-0 h-72 rounded-lg p-4 flex
+                items-end justify-end overflow-hidden">
                   <div
                     aria-hidden="true"
-                    className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
+                    className="absolute inset-x-0
+                     bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
                   />
                   <p className="relative text-lg font-semibold text-white">
                     {product.price}
@@ -87,29 +101,52 @@ const SaveDiamonds: React.FC = () => {
               {/* <div className="mt-6 flex justify-between">
                  <a
                   href={product.href}
-                  className="relative flex bg-gray-100 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-gray-900 hover:bg-gray-200">
+                  className="relative flex 
+                  bg-gray-100 border border-transparent 
+                  rounded-md py-2 px-8 items-center
+                   justify-center text-sm font-medium 
+                   text-gray-900 hover:bg-gray-200">
                   Add to bag<span className="sr-only">, {product.name}</span>
                 </a> 
                 <button
                   type="button"
-                  className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  className="inline-flex items-center
+                   px-3 py-2 border border-transparent
+                    text-sm leading-4 font-medium 
+                    rounded-md text-indigo-700 
+                    bg-indigo-100 hover:bg-indigo-200 
+                    focus:outline-none focus:ring-2 
+                    focus:ring-offset-2 focus:ring-indigo-500">
                   Previous
                 </button>
                 <button
                   type="button"
-                  className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  className="inline-flex items-center
+                   px-3 py-2 border border-transparent
+                    text-sm leading-4 font-medium 
+                    rounded-md text-indigo-700 bg-indigo-100
+                     hover:bg-indigo-200 focus:outline-none 
+                     focus:ring-2 focus:ring-offset-2 
+                     focus:ring-indigo-500">
                   View Details
                 </button>
                 <button
                   type="button"
-                  className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  className="inline-flex 
+                  items-center px-3 py-2 border 
+                  border-transparent text-sm leading-4 
+                  font-medium rounded-md text-indigo-700
+                   bg-indigo-100 hover:bg-indigo-200 
+                   focus:outline-none focus:ring-2 
+                   focus:ring-offset-2 focus:ring-indigo-500">
                   Next
                 </button>
               </div> */}
             </div>
           ))}
           <nav
-            className="bg-white  py-3 flex items-center justify-between border-t border-gray-200"
+            className="bg-white  py-3 flex items-center
+             justify-between border-t border-gray-200"
             aria-label="Pagination">
             <div className="hidden sm:block">
               <p className="text-sm text-gray-700">
@@ -121,12 +158,19 @@ const SaveDiamonds: React.FC = () => {
             <div className="flex-1 flex justify-between sm:justify-end">
               <a
                 href="#"
-                className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                className="relative inline-flex 
+                items-center px-4 py-2 border border-gray-300
+                 text-sm font-medium rounded-md
+                  text-gray-700 bg-white hover:bg-gray-50">
                 Previous
               </a>
               <a
                 href="#"
-                className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                className="ml-3 relative inline-flex
+                 items-center px-4 py-2 border
+                  border-gray-300 text-sm font-medium
+                   rounded-md text-gray-700 bg-white
+                   hover:bg-gray-50">
                 Next
               </a>
             </div>
