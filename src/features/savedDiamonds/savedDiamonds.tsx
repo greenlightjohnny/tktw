@@ -25,7 +25,7 @@ const SaveDiamonds: React.FC = () => {
           Saved Diamonds
         </h2>
 
-        <div className="mt-2 grid grid-cols-1 gap-y-12  sm:gap-x-6  xl:gap-x-8">
+        <div className="mt-2 grid grid-cols-1 s  sm:gap-x-6  xl:gap-x-8">
           {products.map((product) => (
             <div key={product.id}>
               <div className="relative">
@@ -49,7 +49,7 @@ const SaveDiamonds: React.FC = () => {
                     <p className="mt-1 text-sm text-gray-500">L/W Ratio</p>
                   </div>
                 </div>
-                <div className="flex flex-row justify-between mt-4">
+                <div className="flex flex-row justify-between mt-4 mb-4">
                   <div>
                     <h3 className="text-sm font-medium text-blue-900">
                       5.01/F/VS1
