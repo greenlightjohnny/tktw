@@ -29,8 +29,8 @@ const transactions = [
     id: 1,
     name: "Campbell Jewelers",
     href: "#",
-    amount: "2:00PM",
-    currency: "10/3/2021",
+    time: "2:00PM",
+    dateof: "10/3/2021",
     status: "Confirm",
     date: "July 11, 2020",
     datetime: "2020-07-11",
@@ -40,8 +40,8 @@ const transactions = [
     id: 2,
     name: "Campbell Jewelers",
     href: "#",
-    amount: "1:00PM",
-    currency: "8/19/2021",
+    time: "1:00PM",
+    dateof: "8/19/2021",
     status: "Pending",
     date: "July 11, 2020",
     datetime: "2020-07-11",
@@ -51,8 +51,8 @@ const transactions = [
     id: 1,
     name: "Campbell Jewelers",
     href: "#",
-    amount: "3:00PM",
-    currency: "9/20/2021",
+    time: "3:00PM",
+    datof: "9/20/2021",
     status: "View",
     date: "July 11, 2020",
     datetime: "2020-07-11",
@@ -99,10 +99,10 @@ export default function Example() {
                         {/* <span className="text-gray-900 font-medium">
                           {transaction.amount}
                         </span>{" "} */}
-                        {transaction.currency}
+                        {transaction.dateof}
                       </span>
                       <time dateTime={transaction.datetime}>
-                        {transaction.amount}
+                        {transaction.time}
                       </time>
                     </span>
                   </span>
@@ -187,12 +187,12 @@ export default function Example() {
                           {transaction.amount}{" "}
                         </span> */}
                         <span className="text-blue-600 font-bold">
-                          {transaction.currency}
+                          {transaction.dateof}
                         </span>
                       </td>
                       <td className="px-2 py-2 laptop899:px-6 laptop899:py-3 text-left whitespace-nowrap text-sm text-gray-500">
                         <time dateTime={transaction.datetime}>
-                          {transaction.amount}
+                          {transaction.time}
                         </time>
                       </td>
                       <td className=" px-2 py-2 laptop899:px-6 laptop899:py-3 whitespace-nowrap text-right text-sm text-gray-500">
