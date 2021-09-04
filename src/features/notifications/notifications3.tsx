@@ -73,7 +73,7 @@ const Feeds: React.FC = () => {
         {/* <h3 className="mb-2 pl-2 pt-2 text-black-200 font-bold">Notifications</h3> */}
         <ul role="list" className="mb-0  shadow-md">
           <li>
-            <div className="rounded-md bg-green-50 p-4  ">
+            <div className=" bg-green-50 p-4  ">
               <div className="flex flex-1">
                 <div className="flex-shrink-0">
                   <CheckCircleIcon
@@ -147,7 +147,7 @@ const Feeds: React.FC = () => {
             </div>
           </li>*/}
           <li>
-            <div className="rounded-md bg-blue-50 p-4 mb-0">
+            <div className=" bg-blue-50 p-4 mb-0">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <InformationCircleIcon

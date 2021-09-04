@@ -879,10 +879,6 @@ select {
   margin-bottom: 2.5rem;
 }
 
-.-mb-2 {
-  margin-bottom: -0.5rem;
-}
-
 .ml-0 {
   margin-left: 0px;
 }
@@ -1632,6 +1628,10 @@ select {
   padding-bottom: 0.125rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -1670,6 +1670,10 @@ select {
 
 .pr-8 {
   padding-right: 2rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pb-3 {
@@ -2322,10 +2326,6 @@ select {
     margin-right: 2rem;
   }
 
-  .lg\:ml-8 {
-    margin-left: 2rem;
-  }
-
   .lg\:flex {
     display: flex;
   }
@@ -2375,6 +2375,28 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .laptop899\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .laptop899\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1181px) {
+  .desktopv2\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .desktopv2\:flex-row {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1280px) {
