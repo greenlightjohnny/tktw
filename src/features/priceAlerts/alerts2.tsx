@@ -31,12 +31,12 @@ function classNames(...classes: string[]) {
 
 const Alerts: React.FC = () => {
   return (
-    <div>
-      <h3 className="text-lg leading-6 font-medium text-gray-900">
+    <div className="bg-white shadow-md">
+      <h3 className=" pt-4 pl-4 pb-4 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
         Price Alerts
       </h3>
       <dl
-        className="mt-0 grid grid-cols-1 bg-white overflow-hidden shadow-md
+        className="mt-0 grid grid-cols-1 bg-white overflow-hidden 
        shadow divide-y divide-gray-200 md:grid-cols-2 lg:grid-cols-3 md:divide-y-0 md:divide-x">
         {stats.map((item) => (
           <div key={item.name} className="px-4 py-5 sm:p-6">

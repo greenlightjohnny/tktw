@@ -72,8 +72,8 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative  flex flex-col bg-white  mb-10">
-      <h2 className="  mt-4 -mb-2 px-0 pl-4 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide ">
+    <div className="relative  flex flex-col   mb-10">
+      <h2 className="   mb-0 px-0 pl-4 text-base bg-white pt-4 leading-6 font-semibold text-gray-600 uppercase tracking-wide ">
         Appointments
       </h2>
 
@@ -81,12 +81,12 @@ export default function Example() {
       <div className=" shadow-md sm:hidden">
         <ul
           role="list"
-          className="mt-2 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
+          className="mt-0 divide-y divide-gray-200 overflow-hidden shadow sm:hidden">
           {transactions.map((transaction) => (
             <li key={transaction.id}>
               <a
                 href={transaction.href}
-                className="block px-4 py-4 bg-white hover:bg-gray-50">
+                className="block px-4 py-4  bg-white hover:bg-gray-50">
                 <span className="flex items-center space-x-4">
                   <span className="flex-1 flex space-x-2 truncate">
                     <CalendarIcon
@@ -143,14 +143,14 @@ export default function Example() {
       </div>
 
       {/* Activity table (small breakpoint and up) */}
-      <div className="hidden sm:block shadow-md">
+      <div className="hidden sm:block shadow-md bg-white">
         <div className=" mx-auto px-0 sm:px-0 lg:px-0 ">
           <div className="flex flex-col mt-2 ">
             <div className="align-middle min-w-full overflow-x-auto overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-white">
                   <tr>
-                    <th className="px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 md:px-  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Name
                     </th>
                     <th className="px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -167,7 +167,7 @@ export default function Example() {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {transactions.map((transaction) => (
                     <tr key={transaction.id} className="bg-white">
-                      <td className="  px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      <td className="  px-2 py-2 laptop899:px-6 laptop899:py-3 whitespace-nowrap text-sm text-gray-900">
                         <div className="flex">
                           <a
                             href={transaction.href}
@@ -182,7 +182,7 @@ export default function Example() {
                           </a>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-2 py-2 laptop899:px-6 laptop899:py-3 text-left whitespace-nowrap text-sm text-gray-500">
                         {/* <span className="text-blue-900 font-medium">
                           {transaction.amount}{" "}
                         </span> */}
@@ -190,12 +190,12 @@ export default function Example() {
                           {transaction.currency}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-left whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-2 py-2 laptop899:px-6 laptop899:py-3 text-left whitespace-nowrap text-sm text-gray-500">
                         <time dateTime={transaction.datetime}>
                           {transaction.amount}
                         </time>
                       </td>
-                      <td className=" px-6 py-4 whitespace-nowrap text-right text-sm text-gray-500">
+                      <td className=" px-2 py-2 laptop899:px-6 laptop899:py-3 whitespace-nowrap text-right text-sm text-gray-500">
                         {/* <span
                           className={classNames(
                             // statusStyles[transaction.status],

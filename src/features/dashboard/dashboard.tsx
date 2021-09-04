@@ -10,7 +10,7 @@ import App2 from "../appointments/app2";
 const Dashboard: React.FC = () => {
   return (
     <>
-      <div className=" flex flex-grow-1 flex-col lg:flex-row justify-between">
+      <div className=" flex flex-grow-1 flex-col desktopv2:flex-row justify-between">
         <App2 />
         <Notifications />
       </div>

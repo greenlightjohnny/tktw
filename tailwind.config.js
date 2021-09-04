@@ -16,7 +16,12 @@ module.exports = {
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }
 
+      'laptop899': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
       'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+      'desktopv2': '1181px',
       // => @media (min-width: 1024px) { ... }
 
       'desktop': '1280px',

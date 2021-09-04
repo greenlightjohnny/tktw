@@ -29,11 +29,13 @@ const people = [
 
 const Appointments: React.FC = () => {
   return (
-    <div className=" flex-1">
-      <h3 className="text-lg mb- leading-6 font-medium text-gray-900">
+    <div
+      className=" flex-1
+     bg-white shadow-md mr-0 lg:mr-8">
+      <h3 className=" pt-4 pl-4 pb-4 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
         Appointments
       </h3>
-      <div className="bg-white shadow-md pt-4 pr-4 pl-4 pb-4 mr-0 lg:mr-8 ">
+      <div className="bg-white  pt-4 pr-4 pl-4 pb-4 mr-0  ">
         <div className="flow-root mt-6 ">
           <ul role="list" className="-my-5 divide-y divide-gray-200">
             {people.map((person) => (
