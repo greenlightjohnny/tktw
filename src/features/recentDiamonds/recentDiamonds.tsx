@@ -47,12 +47,12 @@ function classNames(...classes: string[]) {
 
 const RecentDiamonds: React.FC = () => {
   return (
-    <div className=" flex-1 mt-0 bg-white shadow-md flex-1">
-      <h3 className=" pt-4 pl-4 pb-0 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
+    <div className=" flex-1 mt-0  flex-1 mb-10">
+      <h3 className=" pt-4 pl-4 pb-0 leadin-6 bg-white text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
         Recent Diamonds
       </h3>
-      <div className="bg-white  pt-0 pr-4 pl-4 pb-4">
-        <div className="flow-root mt-6 ">
+      <div className="bg-white  pt-6 pr-4 pl-4 pb-4 shadow-md">
+        <div className="flow-root  ">
           <ul role="list" className="-my-5 divide-y divide-gray-200">
             {people.map((person) => (
               <li key={person.handle} className="py-4">
@@ -67,7 +67,7 @@ const RecentDiamonds: React.FC = () => {
                     <p className="text-sm font-medium text-gray-900 truncate">
                       {person.name}
                     </p>
-                    <div className="flex">
+                    <div className="flex flex-col md:flex-row">
                       <p className="text-sm text-gray-500 truncate pr-2">
                         {person.handle}
                       </p>

@@ -19,7 +19,7 @@ const products = [
 
 const SaveDiamonds: React.FC = () => {
   return (
-    <div className="flex-1 bg-white mr-0 lg:mr-8">
+    <div className="flex-1 bg-white mr-0 lg:mr-8 mb-10">
       <div className="max-w-2xl mx-auto  px-4 py-0  lg:max-w-7xl pb-0 shadow-md">
         <h2 className=" pt-4  pb-4 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
           Saved Diamonds
@@ -48,6 +48,13 @@ const SaveDiamonds: React.FC = () => {
                     <h3 className="text-sm font-medium text-blue-900">1</h3>
                     <p className="mt-1 text-sm text-gray-500">L/W Ratio</p>
                   </div>
+                  <div>
+                    <button
+                      type="button"
+                      className="inline-flex items-center mt-4 px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      View
+                    </button>
+                  </div>
                 </div>
                 <div className="flex flex-row justify-between mt-4 mb-4">
                   <div>
@@ -58,11 +65,7 @@ const SaveDiamonds: React.FC = () => {
                       134 days on StoneAlgo
                     </p>
                   </div>
-                  <button
-                    type="button"
-                    className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    View
-                  </button>
+
                   <div>
                     <h3 className="text-sm font-medium text-blue-900">
                       $333,000
