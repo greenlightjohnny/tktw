@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap);
 .vvII1IQzLYIW7kWYBXOK {
   @apply flex flex-col justify-center 
     items-center bg-white h-screen font-mono py-40;
@@ -556,7 +558,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: ui-monospace;
+  font-family: Ubuntu, ui-monospace;
 }
 
 /**
@@ -666,6 +668,18 @@ select {
   padding-right: 2.5rem;
   -webkit-print-color-adjust: exact;
           color-adjust: exact;
+}
+
+@font-face {
+  font-family: Roboto;
+
+  src: local("Roboto"), url(/a8d6ac03c7b96b7acb62.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: Ubuntu;
+
+  src: url(/90c045b7547db9275807.ttf) format("ttf");
 }
 
 .sr-only {
@@ -1740,8 +1754,8 @@ select {
   vertical-align: bottom;
 }
 
-.font-sans {
-  font-family: Roboto, sans-serif;
+.font-mono {
+  font-family: Ubuntu, ui-monospace;
 }
 
 .text-xs {

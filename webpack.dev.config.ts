@@ -60,26 +60,26 @@ const config: Configuration = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
-      {
-        test: /\.(woff|woff2)$/,
-        use: {
-          loader: "resolve-url-loader",
-          options: {
-            name: "fonts/[name].[ext]",
-            limit: 5000,
-            mimetype: "application/font-woff",
-          },
-        },
-      },
-      {
-        test: /\.(ttf|eot)$/,
-        use: {
-          loader: "resolve-url-loader",
-          options: {
-            name: "fonts/[name].[ext]",
-          },
-        },
-      },
+      // {
+      //   test: /\.(woff|woff2)$/,
+      //   use: {
+      //     loader: "resolve-url-loader",
+      //     options: {
+      //       name: "fonts/[name].[ext]",
+      //       limit: 5000,
+      //       mimetype: "application/font-woff",
+      //     },
+      //   },
+      // },
+      // {
+      //   test: /\.(ttf|eot)$/,
+      //   use: {
+      //     loader: "resolve-url-loader",
+      //     options: {
+      //       name: "fonts/[name].[ext]",
+      //     },
+      //   },
+      // },
       // {
       //   test: /\.(png|jp(e*)g|svg)$/,
       //   use: [

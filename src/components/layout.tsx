@@ -171,7 +171,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 alt="Workflow"
               />
               <div className="ml-8">
-                <h4 className="text-black mb-0 font-sans">Conner</h4>
+                <h4 className="text-black mb-0 font-mono">Conner</h4>
                 <p className="text-gray-500 text-sm">@GreenJewel</p>
               </div>
             </div>

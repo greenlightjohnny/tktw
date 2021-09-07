@@ -23,6 +23,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Roboto', 'sans-serif'],
+        'serif': ['ui-serif'],
+        'mono': ['Ubuntu', 'ui-monospace'],
+        //'display': ['Roboto', 'sans-serif'],
+        //'body': ['Roboto', 'sans-serif'],
+    },
     screens: {
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }
@@ -42,13 +49,7 @@ module.exports = {
       'maxHeight': 'max-height',
       
      },
-     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
-      'serif': ['ui-serif'],
-      'mono': ['ui-monospace'],
-      'display': ['Roboto', 'sans-serif'],
-      'body': ['Roboto', 'sans-serif'],
-  },
+  
 
     },
    
