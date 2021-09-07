@@ -1,3 +1,14 @@
+// // eslint-disable-next-line @typescript-eslint/no-var-requires
+// const defaultTheme = require('tailwindcss/defaultTheme')
+
+// const fontFamily = defaultTheme.fontFamily;
+// fontFamily['sans'] = [
+//   'Roboto', // <-- Roboto is a default sans font now
+//   'system-ui',
+//   // <-- you may provide more font fallbacks here
+// ];
+
+
 module.exports = {
   purge: {
     enabled: true,
@@ -30,9 +41,17 @@ module.exports = {
     transitionProperty: {
       'maxHeight': 'max-height',
       
-     }
+     },
+     fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+      'serif': ['ui-serif'],
+      'mono': ['ui-monospace'],
+      'display': ['Roboto', 'sans-serif'],
+      'body': ['Roboto', 'sans-serif'],
+  },
 
     },
+   
   },
   variants: {
     extend: {backgroundColor: ['active'],},

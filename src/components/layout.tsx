@@ -163,7 +163,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
         <div className="flex flex-col w-64">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0">
-            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
+            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-200">
               {/* <img className="h-12 w-auto" src={Stones} alt="Workflow" /> */}
               <img
                 className="h-10 w-auto rounded-lg"
@@ -171,27 +171,27 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 alt="Workflow"
               />
               <div className="ml-8">
-                <h4 className="text-white mb-0">Conner</h4>
+                <h4 className="text-black mb-0 font-sans">Conner</h4>
                 <p className="text-gray-500 text-sm">@GreenJewel</p>
               </div>
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
-              <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
+              <nav className="flex-1 px-2 py-4 bg-gray-200 space-y-1">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
                     to={item.href}
                     exact={true}
-                    activeClassName="bg-gray-900 text-white"
+                    activeClassName="bg-gray-700 text-white"
                     className={classNames(
-                      "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "text-black hover:bg-gray-700 hover:text-white",
                       "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}>
                     <item.icon
                       className={classNames(
                         item.current
                           ? "text-gray-300"
-                          : "text-gray-400 group-hover:text-gray-300",
+                          : "text-black group-hover:text-gray-300",
                         "mr-3 flex-shrink-0 h-6 w-6"
                       )}
                       aria-hidden="true"

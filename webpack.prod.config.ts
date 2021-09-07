@@ -82,6 +82,26 @@ const config: webpack.Configuration = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            name: "fonts/[name].[ext]",
+            limit: 5000,
+            mimetype: "application/font-woff",
+          },
+        },
+      },
+      {
+        test: /\.(ttf|eot)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            name: "fonts/[name].[ext]",
+          },
+        },
+      },
     ],
   },
   resolve: {

@@ -57,7 +57,11 @@ const Appointments: React.FC = () => {
   };
   return (
     <div className="relative  flex flex-col   mb-10">
-      <h2 className="   mb-0 px-0 pl-4 text-base bg-white pt-4 leading-6 font-semibold text-gray-600 uppercase tracking-wide ">
+      <h2
+        className="mb-0 px-0 pl-4 
+      text-base bg-blue-200 pt-4 pb-4
+      leading-6 font-semibold text-gray-900
+      uppercase tracking-wide ">
         Appointments
       </h2>
 
@@ -132,18 +136,18 @@ const Appointments: React.FC = () => {
           <div className="flex flex-col mt-2 ">
             <div className="align-middle min-w-full overflow-x-auto overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-600">
+                <thead className="bg-white">
                   <tr>
-                    <th className="px-6 py-3 md:px-  text-left text-xs font-medium text-white uppercase tracking-wider">
+                    <th className="px-6 py-3 md:px-  text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                       Name
                     </th>
-                    <th className="px-6 py-3  text-left text-xs font-medium text-white uppercase tracking-wider">
+                    <th className="px-6 py-3  text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                       Date
                     </th>
-                    <th className=" px-6 py-3  text-left text-xs font-medium text-white uppercase tracking-wider">
+                    <th className=" px-6 py-3  text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
                       Time
                     </th>
-                    <th className="px-6 py-3  text-right text-xs font-medium text-white uppercase tracking-wider">
+                    <th className="px-6 py-3  text-right text-xs font-medium text-gray-600 uppercase tracking-wider">
                       Action
                     </th>
                   </tr>
