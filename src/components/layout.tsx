@@ -171,7 +171,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 alt="Workflow"
               />
               <div className="ml-8">
-                <h4 className="text-black mb-0 font-mono">Conner</h4>
+                <h4 className="text-black mb-0 font-sans Roboto">Conner</h4>
                 <p className="text-gray-500 text-sm">@GreenJewel</p>
               </div>
             </div>
@@ -182,16 +182,16 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                     key={item.name}
                     to={item.href}
                     exact={true}
-                    activeClassName="bg-gray-700 text-white"
+                    activeClassName=" text-indigo-700"
                     className={classNames(
-                      "text-black hover:bg-gray-700 hover:text-white",
+                      "text-gray-900 hover:bg-gray-700 hover:text-white",
                       "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}>
                     <item.icon
                       className={classNames(
                         item.current
-                          ? "text-gray-300"
-                          : "text-black group-hover:text-gray-300",
+                          ? "text-indigo-700"
+                          : "text-gray-400 group-hover:text-gray-300",
                         "mr-3 flex-shrink-0 h-6 w-6"
                       )}
                       aria-hidden="true"

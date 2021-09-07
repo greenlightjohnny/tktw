@@ -22,11 +22,21 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    
+    fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+      'serif': ['Times'],
+      'mono': ['Menlo', 'ui-monospace'],
+      //'display': ['Roboto', 'sans-serif'],
+      //'body': ['Roboto', 'sans-serif'],
+  },
+
     extend: {
+     
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
-        'serif': ['ui-serif'],
-        'mono': ['Ubuntu', 'ui-monospace'],
+        'serif': ['Times'],
+        'mono': ['Menlo', 'ui-monospace'],
         //'display': ['Roboto', 'sans-serif'],
         //'body': ['Roboto', 'sans-serif'],
     },
