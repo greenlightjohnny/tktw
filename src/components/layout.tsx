@@ -18,6 +18,7 @@ import {
 import { SearchIcon } from "@heroicons/react/solid";
 import { NavLink } from "react-router-dom";
 import Stones from "../images/stones.png";
+import Logo from "../images/mlogo.jpg";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
@@ -163,7 +164,16 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0">
             <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
-              <img className="h-12 w-auto" src={Stones} alt="Workflow" />
+              {/* <img className="h-12 w-auto" src={Stones} alt="Workflow" /> */}
+              <img
+                className="h-10 w-auto rounded-lg"
+                src={Logo}
+                alt="Workflow"
+              />
+              <div className="ml-8">
+                <h4 className="text-white mb-0">Conner</h4>
+                <p className="text-gray-500 text-sm">@GreenJewel</p>
+              </div>
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
               <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
