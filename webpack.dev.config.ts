@@ -41,13 +41,13 @@ const config: Configuration = {
       },
       {
         test: /\.css$/,
-
+        //include: path.resolve(__dirname, "src/styles/custom.module.css"),
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
               esModule: false,
-              //include: path.resolve(__dirname, "src/index.css"),
+              //include: path.resolve(__dirname, "../styles/custom.module.css"),
             },
           },
           //"style-loader",

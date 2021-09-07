@@ -171,12 +171,12 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 alt="Workflow"
               />
               <div className="ml-8">
-                <h4 className="text-black mb-0 font-sans Roboto">Conner</h4>
+                <h4 className="text-black mb-0 test-me">Conner</h4>
                 <p className="text-gray-500 text-sm">@GreenJewel</p>
               </div>
             </div>
-            <div className="flex-1 flex flex-col overflow-y-auto">
-              <nav className="flex-1 px-2 py-4 bg-gray-200 space-y-1">
+            <div className="flex-1 flex flex-col overflow-y-auto ">
+              <nav className="flex-1 px-2 py-4 bg-gray-200 pt-6 space-y-1">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
@@ -190,7 +190,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                     <item.icon
                       className={classNames(
                         item.current
-                          ? "text-indigo-700"
+                          ? "text-indigo-500"
                           : "text-gray-400 group-hover:text-gray-300",
                         "mr-3 flex-shrink-0 h-6 w-6"
                       )}
