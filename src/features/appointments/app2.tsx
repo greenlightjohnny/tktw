@@ -132,74 +132,24 @@ const Appointments: React.FC = () => {
           <div className="flex flex-col mt-2 ">
             <div className="align-middle min-w-full overflow-x-auto overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-white">
+                <thead className="bg-gray-600">
                   <tr>
-                    <th className="px-6 py-3 md:px-  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 md:px-  text-left text-xs font-medium text-white uppercase tracking-wider">
                       Name
                     </th>
-                    <th className="px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3  text-left text-xs font-medium text-white uppercase tracking-wider">
                       Date
                     </th>
-                    <th className=" px-6 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className=" px-6 py-3  text-left text-xs font-medium text-white uppercase tracking-wider">
                       Time
                     </th>
-                    <th className="px-6 py-3  text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3  text-right text-xs font-medium text-white uppercase tracking-wider">
                       Action
                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {transactions.map((transaction) => (
-                    <tr key={transaction.id} className="bg-white">
-                      <Modal isOpen={} />
-                      <td className="  px-2 py-2 laptop899:px-6 laptop899:py-3 whitespace-nowrap text-sm text-gray-900">
-                        <div className="flex">
-                          <a
-                            href={transaction.href}
-                            onClick={(e) => showModal(e)}
-                            className="group inline-flex space-x-2 truncate text-sm">
-                            <CalendarIcon
-                              className="flex-shrink-0 h-5 w-5 hidden sm:block text-blue-900 group-hover:text-gray-500"
-                              aria-hidden="true"
-                            />
-                            <p className="text-gray-500  group-hover:text-gray-900">
-                              {transaction.name}
-                            </p>
-                          </a>
-                        </div>
-                      </td>
-                      <td className="px-2 py-2 laptop899:px-6 laptop899:py-3 text-left whitespace-nowrap text-sm text-gray-500">
-                        {/* <span className="text-blue-900 font-medium">
-                          {transaction.amount}{" "}
-                        </span> */}
-                        <span className="text-blue-600 font-bold">
-                          {transaction.dateof}
-                        </span>
-                      </td>
-                      <td className="px-2 py-2 laptop899:px-6 laptop899:py-3 text-left whitespace-nowrap text-sm text-gray-500">
-                        <time dateTime={transaction.datetime}>
-                          {transaction.time}
-                        </time>
-                      </td>
-                      <td className=" px-2 py-2 laptop899:px-6 laptop899:py-3 whitespace-nowrap text-right text-sm text-gray-500">
-                        {/* <span
-                          className={classNames(
-                            // statusStyles[transaction.status],
-                            "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize"
-                          )}>
-                          {transaction.status}
-                        </span> */}
-                        <button
-                          type="button"
-                          className={classNames(
-                            transaction.color,
-                            "w-20 inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                          )}>
-                          {transaction.status}
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                  <Modal />
                 </tbody>
               </table>
               {/* Pagination */}

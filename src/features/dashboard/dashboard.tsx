@@ -11,10 +11,12 @@ import SavedDiamonds from "../savedDiamonds/savedDiamonds";
 const Dashboard: React.FC = () => {
   return (
     <>
-      <div className=" flex flex-grow-1 flex-col desktopv2:flex-row justify-between">
+      <App2 />
+      <Notifications />
+      {/* <div className=" flex flex-grow-1 flex-col desktopv2:flex-row justify-between">
         <App2 />
         <Notifications />
-      </div>
+      </div> */}
       {/* <div className="flex flex-col lg:flex-col ">
         <App2 />
       </div> */}
