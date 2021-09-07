@@ -19,10 +19,10 @@ const products = [
 
 const SaveDiamonds: React.FC = () => {
   return (
-    <div className="flex-1 bg-white mr-0 lg:mr-8 mb-10">
+    <div className="flex-1 bg-white mr-0 lg:mr-8 mb-10 shadow-md">
       <div
         className="max-w-2xl mx-auto  
-      px-4 py-0  lg:max-w-7xl pb-0 shadow-md">
+      px-4 py-0  lg:max-w-7xl pb-0 ">
         <h2
           className=" pt-4 
         pb-4 leadin-6 text-base leading-6

@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Modal from "./components/modal";
 import { CalendarIcon } from "@heroicons/react/solid";
 
 const transactions = [
@@ -12,7 +12,7 @@ const transactions = [
     status: "Confirm",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-green-100 text-black",
+    color: "bg-red-100 text-black",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const transactions = [
     status: "Pending",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-blue-100 text-black",
+    color: "bg-gray-100 text-black",
   },
   {
     id: 1,
@@ -47,7 +47,14 @@ const statusStyles = {
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
+
 const Appointments: React.FC = () => {
+  const [open, setOpen] = useState(true);
+
+  const showModal = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setOpen(!open);
+  };
   return (
     <div className="relative  flex flex-col   mb-10">
       <h2 className="   mb-0 px-0 pl-4 text-base bg-white pt-4 leading-6 font-semibold text-gray-600 uppercase tracking-wide ">
@@ -144,10 +151,12 @@ const Appointments: React.FC = () => {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {transactions.map((transaction) => (
                     <tr key={transaction.id} className="bg-white">
+                      <Modal isOpen={} />
                       <td className="  px-2 py-2 laptop899:px-6 laptop899:py-3 whitespace-nowrap text-sm text-gray-900">
                         <div className="flex">
                           <a
                             href={transaction.href}
+                            onClick={(e) => showModal(e)}
                             className="group inline-flex space-x-2 truncate text-sm">
                             <CalendarIcon
                               className="flex-shrink-0 h-5 w-5 hidden sm:block text-blue-900 group-hover:text-gray-500"
@@ -194,6 +203,7 @@ const Appointments: React.FC = () => {
                 </tbody>
               </table>
               {/* Pagination */}
+
               <nav
                 className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
                 aria-label="Pagination">
