@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-undef
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -9,26 +11,25 @@ module.exports = {
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
   },
-  plugins: [
-    "@typescript-eslint",
-    "react-hooks",
-    
-  ],
+  plugins: ["react", "prettier", "@typescript-eslint", "react-hooks"],
   extends: [
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:prettier/recommended",
+    "eslint:recommended",
   ],
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
   },
   settings: {
     react: {
-      "pragma": "React",
-      "version": "detect"
-    }
-  }
-}
+      pragma: "React",
+      version: "detect",
+    },
+  },
+};

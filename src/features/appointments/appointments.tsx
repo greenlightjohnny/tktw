@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "./components/modal";
 import { CalendarIcon } from "@heroicons/react/solid";
-import TimePicker from "./components/timePicker";
 
 const transactions = [
   {
@@ -50,12 +49,6 @@ function classNames(...classes: string[]) {
 }
 
 const Appointments: React.FC = () => {
-  const [open, setOpen] = useState(true);
-
-  const showModal = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    setOpen(!open);
-  };
   return (
     <div className="relative  flex flex-col   mb-10">
       <h2
