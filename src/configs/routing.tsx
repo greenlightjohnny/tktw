@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Notifications from "../features/notifications/notificationsFull";
 import Dashboard from "../features/dashboard/dashboard";
-import Alerts from "../features/priceAlerts/alerts2";
+import Alerts from "../features/priceAlerts/priceAlerts";
 import Appointments from "../features/appointments/appointments";
 import RecentDiamonds from "../features/recentDiamonds/recentDiamonds";
 

@@ -1,13 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "./styles/custom.module.css";
-
 @import "tailwindcss/utilities";
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import "./styles/custom.module.css"; */
 
 @font-face {
   font-family: "Roboto";

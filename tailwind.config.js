@@ -1,14 +1,4 @@
-//eslint-disable-next-line @typescript-eslint/no-var-requires
-// const defaultTheme = require('tailwindcss/defaultTheme')
 
-// const fontFamily = defaultTheme.fontFamily;
-// fontFamily['sans'] = [
-//   'Roboto', // <-- Roboto is a default sans font now
-//   'system-ui',
-//   // <-- you may provide more font fallbacks here
-// ];
-//const defaultTheme = require('tailwindcss/defaultTheme')
-//import defaultTheme from 'tailwindcss/defaultTheme' 
   
 module.exports = {
   purge: {
@@ -24,13 +14,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: { 
     
-  //   fontFamily: {
-  //     'sans': ['Ubuntu', 'sans-serif'],
-  //     'serif': ['Times'],
-  //     'mono': ['Menlo', 'ui-monospace'],
-  //     'display': ['Times', 'sans-serif'],
-  //     'body': ['Times', 'sans-serif'],
-  // },
 
     extend: {
      

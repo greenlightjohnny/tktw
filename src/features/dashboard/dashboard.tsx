@@ -1,6 +1,6 @@
 import React from "react";
 import Notifications from "../notifications/notifications3";
-import Alert from "../priceAlerts/alerts2";
+import Alert from "../priceAlerts/priceAlerts";
 import RecentDiamonds from "../recentDiamonds/recentDiamonds";
 import Appointments from "../appointments/appointments";
 import SavedDiamonds from "../savedDiamonds/savedDiamonds";
