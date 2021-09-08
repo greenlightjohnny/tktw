@@ -127,7 +127,7 @@ const Feeds: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
           </li>
           <li>
             <div className="rounded-md bg-red-50 p-4 mb-4">
