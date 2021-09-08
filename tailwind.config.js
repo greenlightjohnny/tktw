@@ -7,11 +7,12 @@
 //   'system-ui',
 //   // <-- you may provide more font fallbacks here
 // ];
-
-
+//const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme' 
+  
 module.exports = {
   purge: {
-    enabled: true,
+    enabled: true, 
     content: [
       './src/**/*.html',
      './src/**/*.tsx',
@@ -34,12 +35,12 @@ module.exports = {
     extend: {
      
       fontFamily: {
-        'sans': ["'Ubuntu'", 'sans-serif'],
+        'sans': ["'Ubuntu'", ...defaultTheme.fontFamily.sans],
         'serif': ['Times'],
         'mono': ['Menlo', 'ui-monospace'],
         'display': ['Times', 'sans-serif'],
         'body': ['Times', 'sans-serif'],
-    },
+    }, 
     screens: {
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }

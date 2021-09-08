@@ -93,15 +93,15 @@ const config: webpack.Configuration = {
       //     },
       //   },
       // },
-      {
-        test: /\.(ttf|eot)$/,
-        use: {
-          loader: "url-loader",
-          options: {
-            name: "src/fonts/[name].[ext]",
-          },
-        },
-      },
+      // {
+      //   test: /\.(ttf|eot)$/,
+      //   use: {
+      //     loader: "url-loader",
+      //     options: {
+      //       name: "src/fonts/[name].[ext]",
+      //     },
+      //   },
+      // },
     ],
   },
   resolve: {

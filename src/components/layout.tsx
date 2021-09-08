@@ -170,6 +170,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 src={Logo}
                 alt="Workflow"
               />
+
               <div className="ml-8">
                 <h4 className="text-black mb-0 test-font">Conner</h4>
                 <h4 className="text-black mb-0 font-sans">Conner</h4>

@@ -3,6 +3,7 @@ import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 //import CopyPlugin from "copy-webpack-plugin";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyPlugin = require("copy-webpack-plugin");
 
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
@@ -72,16 +73,16 @@ const config: Configuration = {
       //     },
       //   },
       // },
-      {
-        test: /\.(ttf|eot)$/,
+      // {
+      //   test: /\.(ttf|eot)$/,
 
-        use: {
-          loader: "url-loader",
-          options: {
-            name: "src/fonts/[name].[ext]",
-          },
-        },
-      },
+      //   use: {
+      //     loader: "url-loader",
+      //     options: {
+      //       name: "src/fonts/[name].[ext]",
+      //     },
+      //   },
+      // },
       // {
       //   test: /\.(png|jp(e*)g|svg)$/,
       //   use: [
@@ -99,9 +100,9 @@ const config: Configuration = {
   },
   resolve: {
     modules: [
-      path.resolve("./src/"),
-      "node_modules",
-      path.resolve("./images/"),
+      // path.resolve("./src/"),
+      // "node_modules",
+      // path.resolve("./images/"),
     ],
     extensions: [".tsx", ".ts", ".js", ".css"],
   },
@@ -121,17 +122,17 @@ const config: Configuration = {
       filename: "styles.css",
       chunkFilename: "[name]-dev2.css",
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src/public"),
-        },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, "build/*"),
+    //     },
+    //   ],
+    // }),
   ],
   devtool: "inline-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "build", "src/public"),
+    contentBase: path.join(__dirname, "build"),
     //static: { directory: path.join(__dirname, "build") },
     // static: {
     //   directory: path.join(__dirname, "build"),
