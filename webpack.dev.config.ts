@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 //import CopyPlugin from "copy-webpack-plugin";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const CopyPlugin = require("copy-webpack-plugin");
+//const CopyPlugin = require("copy-webpack-plugin");
 
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 //import * as webpackDevServer from "webpack-dev-server";
@@ -100,11 +100,11 @@ const config: Configuration = {
   },
   resolve: {
     modules: [
-      // path.resolve("./src/"),
-      // "node_modules",
+      path.resolve("./src/"),
+      "node_modules",
       // path.resolve("./images/"),
     ],
-    extensions: [".tsx", ".ts", ".js", ".css"],
+    extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,4 +1,4 @@
-// // eslint-disable-next-line @typescript-eslint/no-var-requires
+//eslint-disable-next-line @typescript-eslint/no-var-requires
 // const defaultTheme = require('tailwindcss/defaultTheme')
 
 // const fontFamily = defaultTheme.fontFamily;
@@ -8,7 +8,7 @@
 //   // <-- you may provide more font fallbacks here
 // ];
 //const defaultTheme = require('tailwindcss/defaultTheme')
-import defaultTheme from 'tailwindcss/defaultTheme' 
+//import defaultTheme from 'tailwindcss/defaultTheme' 
   
 module.exports = {
   purge: {
@@ -35,8 +35,8 @@ module.exports = {
     extend: {
      
       fontFamily: {
-        'sans': ["'Ubuntu'", ...defaultTheme.fontFamily.sans],
-        'serif': ['Times'],
+        'sans': ["'Roboto'"],
+        'serif': ["'Ubuntu'"],
         'mono': ['Menlo', 'ui-monospace'],
         'display': ['Times', 'sans-serif'],
         'body': ['Times', 'sans-serif'],
