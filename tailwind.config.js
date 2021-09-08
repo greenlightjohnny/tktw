@@ -35,11 +35,11 @@ module.exports = {
     extend: {
      
       fontFamily: {
-        'sans': ["'Roboto'"],
+        'sans': ['Roboto'],
         'serif': ["'Ubuntu'"],
         'mono': ['Menlo', 'ui-monospace'],
-        'display': ['Times', 'sans-serif'],
-        'body': ['Times', 'sans-serif'],
+        'display': ['Roboto', 'sans-serif'],
+        'body': ['Roboto', 'sans-serif'],
     }, 
     screens: {
       'tablet': '640px',

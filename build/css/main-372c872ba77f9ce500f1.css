@@ -399,7 +399,7 @@ ul {
  */
 
 html {
-  font-family: 'Ubuntu'; /* 1 */
+  font-family: 'Roboto'; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -1736,6 +1736,10 @@ select {
 }
 
 .font-sans {
+  font-family: 'Roboto';
+}
+
+.font-serif {
   font-family: 'Ubuntu';
 }
 
@@ -2216,6 +2220,30 @@ select {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./styles/custom.module.css"; */
+
+@font-face {
+  font-family: "Roboto";
+
+  src: url(/a8d6ac03c7b96b7acb62.ttf);
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+
+  src: url(/90c045b7547db9275807.ttf);
+
+  font-weight: 500;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"); */
 
 @media (min-width: 640px) {
   .sm\:col-start-1 {

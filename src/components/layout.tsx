@@ -172,9 +172,9 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
               />
 
               <div className="ml-8">
-                <h4 className="text-black mb-0 font-serif">Conner</h4>
+                {/* <h4 className="text-black mb-0 font-serif">Conner</h4> */}
                 <h4 className="text-black mb-0 font-sans">Conner</h4>
-                <p className="text-gray-500 text-sm test-font2">@GreenJewel</p>
+                <p className="text-gray-500 text-sm font-sans">@GreenJewel</p>
               </div>
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto ">
@@ -186,7 +186,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                     exact={true}
                     activeClassName=" text-indigo-700"
                     className={classNames(
-                      "text-gray-900 hover:bg-gray-700 hover:text-white",
+                      "text-gray-900 hover:bg-gray-700 hover:text-white font-sans",
                       "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}>
                     <item.icon
