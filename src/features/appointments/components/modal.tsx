@@ -20,7 +20,7 @@ const transactions = [
     status: "Confirm",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-red-100 text-black",
+    color: "bg-red-400 text-black font-medium",
   },
   {
     id: 2,
@@ -31,20 +31,19 @@ const transactions = [
     status: "Pending",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-gray-100 text-black",
+    color: "bg-gray-200 text-black",
   },
   {
-    id: 1,
+    id: 3,
     name: "Campbell Jewelers",
     href: "#",
     time: "3:00PM",
-    datof: "9/20/2021",
+    dateof: "9/21/2021",
     status: "View",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-indigo-100 text-gray-800",
+    color: "bg-indigo-400 text-black",
   },
-  // More transactions...
 ];
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");

@@ -32,7 +32,9 @@ function classNames(...classes: string[]) {
 const Alerts: React.FC = () => {
   return (
     <div className="bg-white shadow-md">
-      <h3 className=" pt-4 pl-4 pb-4 leadin-6 text-base leading-6 font-semibold text-gray-600 uppercase tracking-wide">
+      <h3
+        className=" pt-4 pl-4 pb-4 leadin-6 text-base bg-indigo-700
+       leading-6 font-semibold text-white uppercase tracking-wide">
         Price Alerts
       </h3>
       <dl

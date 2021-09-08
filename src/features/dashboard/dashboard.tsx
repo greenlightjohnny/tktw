@@ -1,5 +1,5 @@
 import React from "react";
-import Notifications from "../notifications/notifications3";
+import Notifications from "../notifications/notifications";
 import Alert from "../priceAlerts/priceAlerts";
 import RecentDiamonds from "../recentDiamonds/recentDiamonds";
 import Appointments from "../appointments/appointments";

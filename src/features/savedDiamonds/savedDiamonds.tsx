@@ -22,15 +22,15 @@ const SaveDiamonds: React.FC = () => {
     <div className="flex-1 bg-white mr-0 lg:mr-8 mb-10 shadow-md">
       <div
         className="max-w-2xl mx-auto  
-      px-4 py-0  lg:max-w-7xl pb-0 ">
+      py-0  lg:max-w-7xl pb-0 ">
         <h2
           className=" pt-4 
-        pb-4 leadin-6 text-base leading-6
-        font-semibold text-gray-600 uppercase tracking-wide">
+        pb-4 pl-4 leadin-6 text-base leading-6 bg-indigo-700
+        font-semibold text-white uppercase tracking-wide">
           Saved Diamonds
         </h2>
 
-        <div className="mt-2 grid grid-cols-1 s  sm:gap-x-6  xl:gap-x-8">
+        <div className="mt-2 grid grid-cols-1 s  px-4 sm:gap-x-6  xl:gap-x-8">
           {products.map((product) => (
             <div key={product.id}>
               <div className="relative">

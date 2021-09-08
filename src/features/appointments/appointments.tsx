@@ -12,7 +12,7 @@ const transactions = [
     status: "Confirm",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-red-100 text-black",
+    color: "bg-red-200 text-black",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const transactions = [
     status: "View",
     date: "July 11, 2020",
     datetime: "2020-07-11",
-    color: "bg-indigo-100 text-gray-800",
+    color: "bg-indigo-200 text-gray-800",
   },
   // More transactions...
 ];
@@ -59,8 +59,8 @@ const Appointments: React.FC = () => {
     <div className="relative  flex flex-col   mb-10">
       <h2
         className="mb-0 px-0 pl-4 
-      text-base bg-blue-200 pt-4 pb-4
-      leading-6 font-semibold text-gray-900
+      text-base bg-indigo-700 pt-4 pb-4
+      leading-6 font-semibold text-white
       uppercase tracking-wide ">
         Appointments
       </h2>
