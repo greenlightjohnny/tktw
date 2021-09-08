@@ -8,11 +8,11 @@
   src: url("./fonts/Roboto-Regular.ttf");
   font-weight: 400;
 }
-@font-face {
+/* @font-face {
   font-family: "Ubuntu";
   src: url("./fonts/Ubuntu-Medium.ttf");
   font-weight: 500;
-}
+} */
 
 @layer components {
   .icon-link {
@@ -20,7 +20,7 @@
   }
 
   .activeClassName > .icon-link {
-    @apply text-indigo-600 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
+    @apply text-indigo-700 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
   }
 }
 

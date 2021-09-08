@@ -19,7 +19,7 @@ module.exports = {
      
       fontFamily: {
         'sans': ['Roboto'],
-        'serif': ["'Ubuntu'"],
+        'serif': [""],
         'mono': ['Menlo', 'ui-monospace'],
         'display': ['Roboto', 'sans-serif'],
         'body': ['Roboto', 'sans-serif'],
