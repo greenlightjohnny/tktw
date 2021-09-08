@@ -171,8 +171,9 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                 alt="Workflow"
               />
               <div className="ml-8">
-                <h4 className="text-black mb-0 test-me">Conner</h4>
-                <p className="text-gray-500 text-sm">@GreenJewel</p>
+                <h4 className="text-black mb-0 test-font">Conner</h4>
+                <h4 className="text-black mb-0 font-sans">Conner</h4>
+                <p className="text-gray-500 text-sm test-font2">@GreenJewel</p>
               </div>
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto ">

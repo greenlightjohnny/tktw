@@ -23,18 +23,18 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: { 
     
-    fontFamily: {
-      //'sans': ['Roboto', 'sans-serif'],
-      'serif': ['Times'],
-      'mono': ['Menlo', 'ui-monospace'],
-      'display': ['Times', 'sans-serif'],
-      'body': ['Times', 'sans-serif'],
-  },
+  //   fontFamily: {
+  //     'sans': ['Ubuntu', 'sans-serif'],
+  //     'serif': ['Times'],
+  //     'mono': ['Menlo', 'ui-monospace'],
+  //     'display': ['Times', 'sans-serif'],
+  //     'body': ['Times', 'sans-serif'],
+  // },
 
     extend: {
      
       fontFamily: {
-        //'sans': ['Roboto', 'sans-serif'],
+        'sans': ["'Ubuntu'", 'sans-serif'],
         'serif': ['Times'],
         'mono': ['Menlo', 'ui-monospace'],
         'display': ['Times', 'sans-serif'],

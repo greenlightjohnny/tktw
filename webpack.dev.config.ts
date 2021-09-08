@@ -2,7 +2,8 @@ import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-//import CopyWebpackPlugin from "copy-webpack-plugin";
+//import CopyPlugin from "copy-webpack-plugin";
+const CopyPlugin = require("copy-webpack-plugin");
 
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 //import * as webpackDevServer from "webpack-dev-server";
@@ -41,7 +42,7 @@ const config: Configuration = {
       },
       {
         test: /\.css$/,
-        //include: path.resolve(__dirname, "src/styles/custom.module.css"),
+
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -71,15 +72,16 @@ const config: Configuration = {
       //     },
       //   },
       // },
-      // {
-      //   test: /\.(ttf|eot)$/,
-      //   use: {
-      //     loader: "resolve-url-loader",
-      //     options: {
-      //       name: "fonts/[name].[ext]",
-      //     },
-      //   },
-      // },
+      {
+        test: /\.(ttf|eot)$/,
+
+        use: {
+          loader: "url-loader",
+          options: {
+            name: "src/fonts/[name].[ext]",
+          },
+        },
+      },
       // {
       //   test: /\.(png|jp(e*)g|svg)$/,
       //   use: [
@@ -96,12 +98,12 @@ const config: Configuration = {
     ],
   },
   resolve: {
-    // modules: [
-    //   path.resolve("./src/"),
-    //   "node_modules",
-    //   path.resolve("./images/"),
-    // ],
-    extensions: [".tsx", ".ts", ".js"],
+    modules: [
+      path.resolve("./src/"),
+      "node_modules",
+      path.resolve("./images/"),
+    ],
+    extensions: [".tsx", ".ts", ".js", ".css"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -119,10 +121,17 @@ const config: Configuration = {
       filename: "styles.css",
       chunkFilename: "[name]-dev2.css",
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src/public"),
+        },
+      ],
+    }),
   ],
   devtool: "inline-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "build"),
+    contentBase: path.join(__dirname, "build", "src/public"),
     //static: { directory: path.join(__dirname, "build") },
     // static: {
     //   directory: path.join(__dirname, "build"),
