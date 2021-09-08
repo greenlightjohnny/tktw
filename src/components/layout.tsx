@@ -178,7 +178,7 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
               </div>
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto ">
-              <nav className="flex-1 px-2 py-4 bg-gray-200 pt-6 space-y-1">
+              <nav className="flex-1 px-2 py-4 bg-gray-100 pt-6 space-y-1">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}

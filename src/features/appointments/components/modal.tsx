@@ -81,6 +81,7 @@ const Modal: React.FC = () => {
                   className="flex-shrink-0 h-5 w-5 hidden sm:block text-blue-900 group-hover:text-gray-500"
                   aria-hidden="true"
                 />
+
                 <p className="text-gray-500  group-hover:text-gray-900">
                   {transaction.name}
                 </p>

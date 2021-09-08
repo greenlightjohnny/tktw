@@ -47,8 +47,12 @@ function classNames(...classes: string[]) {
 
 const RecentDiamonds: React.FC = () => {
   return (
-    <div className=" flex-1 mt-0  flex-1 mb-10">
-      <h3 className=" pt-4 pl-4 pb-4 leadin-6 bg-indigo-700 text-base leading-6 font-semibold text-white uppercase tracking-wide">
+    <div className=" mt-0  flex-1 mb-10">
+      <h3
+        className=" pt-4 pl-4 pb-4
+       leadin-6 bg-indigo-700 text-base
+       leading-6 font-semibold text-white
+       uppercase tracking-wide">
         Recent Diamonds
       </h3>
       <div className="bg-white  pt-6 pr-4 pl-4 pb-4 shadow-md">
@@ -106,7 +110,12 @@ const RecentDiamonds: React.FC = () => {
                   <div>
                     <button
                       type="button"
-                      className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="inline-flex items-center
+                       px-3 py-2 border border-transparent
+                       text-sm leading-4 font-medium rounded-md
+                       text-indigo-700 bg-indigo-100
+                        hover:bg-indigo-200 focus:outline-none
+                        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       View
                     </button>
                   </div>
@@ -118,7 +127,10 @@ const RecentDiamonds: React.FC = () => {
         <div className="mt-6">
           <a
             href="#"
-            className="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+            className="w-full flex justify-center
+             items-center px-4 py-2 border border-gray-300
+              shadow-sm text-sm font-medium rounded-md
+              text-gray-700 bg-white hover:bg-gray-50">
             View all
           </a>
         </div>

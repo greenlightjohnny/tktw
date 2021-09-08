@@ -63,7 +63,10 @@ function classNames(...classes: string[]) {
 const NotificationsFull: React.FC = () => {
   return (
     <div className="flex-1  ml-0  mb-10  ">
-      <h3 className=" pt-4 pl-4 pb-4 bg-indigo-700 leadin-6 text-base leading-6 font-semibold text-white uppercase tracking-wide">
+      <h3
+        className=" pt-4 pl-4 pb-4 bg-indigo-700 
+      leadin-6 text-base leading-6 font-semibold
+       text-white uppercase tracking-wide">
         Notifications
       </h3>
       <div
@@ -90,7 +93,10 @@ const NotificationsFull: React.FC = () => {
                   <div className="-mx-1.5 -my-1.5">
                     <button
                       type="button"
-                      className="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
+                      className="inline-flex bg-green-50 
+                      rounded-md p-1.5 text-green-500 hover:bg-green-100
+                      focus:outline-none focus:ring-2 focus:ring-offset-2
+                       focus:ring-offset-green-50 focus:ring-green-600">
                       <span className="sr-only">Dismiss</span>
                       <XIcon className="h-5 w-5" aria-hidden="true" />
                     </button>
@@ -162,7 +168,8 @@ const NotificationsFull: React.FC = () => {
                   <p className="mt-3 text-sm md:mt-0 md:ml-6">
                     <a
                       href="#"
-                      className="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">
+                      className="whitespace-nowrap font-medium
+                       text-blue-700 hover:text-blue-600">
                       Details <span aria-hidden="true">&rarr;</span>
                     </a>
                   </p>
@@ -171,7 +178,9 @@ const NotificationsFull: React.FC = () => {
             </div>
           </li>
           <li>
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 ">
+            <div
+              className="bg-yellow-50 border-l-4 
+            border-yellow-400 p-4 ">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <ExclamationIcon
@@ -184,7 +193,8 @@ const NotificationsFull: React.FC = () => {
                     Warning{" "}
                     <a
                       href="#"
-                      className="font-medium underline text-yellow-700 hover:text-yellow-600">
+                      className="font-medium underline
+                       text-yellow-700 hover:text-yellow-600">
                       GIA 12353455 has a current price of $10,888 below your
                       alert level of $10,832
                     </a>

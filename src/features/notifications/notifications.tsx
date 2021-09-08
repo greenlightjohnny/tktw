@@ -93,7 +93,11 @@ const Feeds: React.FC = () => {
                   <div className="-mx-1.5 -my-1.5">
                     <button
                       type="button"
-                      className="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600">
+                      className="inline-flex bg-green-50 
+                      rounded-md p-1.5 text-green-500
+                      hover:bg-green-100 focus:outline-none
+                      focus:ring-2 focus:ring-offset-2
+                      focus:ring-offset-green-50 focus:ring-green-600">
                       <span className="sr-only">Dismiss</span>
                       <XIcon className="h-5 w-5" aria-hidden="true" />
                     </button>
@@ -165,7 +169,8 @@ const Feeds: React.FC = () => {
                   <p className="mt-3 text-sm md:mt-0 md:ml-6">
                     <a
                       href="#"
-                      className="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">
+                      className="whitespace-nowrap font-medium
+                       text-blue-700 hover:text-blue-600">
                       Details <span aria-hidden="true">&rarr;</span>
                     </a>
                   </p>
@@ -187,7 +192,8 @@ const Feeds: React.FC = () => {
                     Warning{" "}
                     <a
                       href="#"
-                      className="font-medium underline text-yellow-700 hover:text-yellow-600">
+                      className="font-medium underline 
+                      text-yellow-700 hover:text-yellow-600">
                       GIA 12353455 has a current price of $10,888 below your
                       alert level of $10,832
                     </a>

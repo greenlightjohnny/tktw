@@ -14,17 +14,19 @@ module.exports = {
       modules: true,
     },
   },
-  plugins: ["react", "prettier", "@typescript-eslint", "react-hooks"],
+  plugins: ["react", "@typescript-eslint", "react-hooks"],
   extends: [
+    "prettier",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
     "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
   },
   settings: {
     react: {
