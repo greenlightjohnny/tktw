@@ -13,7 +13,7 @@ const TimePicker: React.FC = () => {
       selection={schedule}
       numDays={5}
       minTime={8}
-      maxTime={22}
+      maxTime={16}
       hourlyChunks={2}
       onChange={handleChange}
     />
