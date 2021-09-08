@@ -1415,6 +1415,16 @@ select {
   background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
 }
 
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
+
 .bg-yellow-50 {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 251, 235, var(--tw-bg-opacity));
@@ -1460,9 +1470,24 @@ select {
   background-color: rgba(224, 231, 255, var(--tw-bg-opacity));
 }
 
+.bg-indigo-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(199, 210, 254, var(--tw-bg-opacity));
+}
+
+.bg-indigo-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(129, 140, 248, var(--tw-bg-opacity));
+}
+
 .bg-indigo-600 {
   --tw-bg-opacity: 1;
   background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
+}
+
+.bg-indigo-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(67, 56, 202, var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover {
@@ -1684,7 +1709,7 @@ select {
 }
 
 .font-serif {
-  font-family: 'Ubuntu';
+  font-family: ;
 }
 
 .text-xs {
@@ -2144,12 +2169,18 @@ select {
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Roboto";
 
-  src: url(/90c045b7547db9275807.ttf);
+  src: url(/7429a63c09f79a1760b0.ttf);
 
   font-weight: 500;
 }
+
+/* @font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Medium.ttf");
+  font-weight: 500;
+} */
 
 @base {
   body,
