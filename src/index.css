@@ -20,6 +20,16 @@
   font-weight: 500;
 }
 
+@layer components {
+  .icon-link {
+    @apply text-gray-400 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
+  }
+
+  .activeClassName > .icon-link {
+    @apply text-indigo-600 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
+  }
+}
+
 @base {
   body,
   html {

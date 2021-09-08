@@ -184,17 +184,16 @@ const Layout: React.FC<Props> = ({ children }: Props) => {
                     key={item.name}
                     to={item.href}
                     exact={true}
-                    activeClassName=" text-indigo-700"
+                    activeClassName="text-indigo-700 activeClassName"
                     className={classNames(
-                      "text-gray-900 hover:bg-gray-700 hover:text-white font-sans",
+                      "link-color hover:bg-gray-700 hover:text-white font-sans",
                       "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}>
                     <item.icon
+                      // className="icon-link w-6 h-6 flex-shrink-0 mr-3"
                       className={classNames(
-                        item.current
-                          ? "text-indigo-500"
-                          : "text-gray-400 group-hover:text-gray-300",
-                        "mr-3 flex-shrink-0 h-6 w-6"
+                        "w-6 h-6 flex-shrink-0 mr-3",
+                        "icon-link"
                       )}
                       aria-hidden="true"
                     />

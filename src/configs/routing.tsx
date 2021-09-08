@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Notifications from "../features/notifications/notifications";
+import Notifications from "../features/notifications/notificationsFull";
 import Dashboard from "../features/dashboard/dashboard";
 import Alerts from "../features/priceAlerts/alerts2";
 import Appointments from "../features/appointments/appointments";

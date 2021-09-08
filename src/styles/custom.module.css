@@ -1,6 +1,26 @@
+@layer components {
+  .icon-link {
+    @apply text-gray-300 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
+  }
+
+  .activeClassName > .icon-link {
+    @apply text-indigo-600 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
+  }
+}
+
 .menu-card {
   @apply flex flex-col justify-center 
     items-center bg-white h-screen font-mono py-40;
+}
+.link-color {
+  @apply text-gray-900;
+}
+.icon-link {
+  @apply text-gray-300 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
+}
+
+.activeClassName .link-color .icon-link {
+  @apply text-indigo-600 group-hover:text-gray-300 mr-3 flex-shrink-0 h-6 w-6;
 }
 
 .menu-text {
